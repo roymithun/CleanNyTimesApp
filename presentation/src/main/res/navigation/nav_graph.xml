@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/articleFragment">
+
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.inhouse.cleannytimesapp.ui.main.ArticleListFragment"
+        android:label="ArticleListFragment"
+        tools:layout="@layout/fragment_article_list">
+        <action
+            android:id="@+id/action_articleListFragment_to_detailFragment"
+            app:destination="@id/articleDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleDetailFragment"
+        android:name="com.inhouse.cleannytimesapp.ui.detail.ArticleDetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/fragment_article_detail">
+        <argument
+            android:name="selectedArticle"
+            app:argType="com.inhouse.cleannytimesapp.model.ArticleUiModel" />
+    </fragment>
+</navigation>

@@ -1,0 +1,14 @@
+plugins {
+    id(GradlePluginId.JAVA_LIBRARY)
+    id(GradlePluginId.KOTLIN_JVM)
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    implementation(libs.bundles.kotlin)
+    implementation(libs.daggersupport)
+}
