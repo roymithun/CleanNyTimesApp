@@ -6,6 +6,7 @@ plugins {
     id(GradlePluginId.KOTLIN_KAPT)
     id(GradlePluginId.HILT_ANDROID)
     id(GradlePluginId.KOTLIN_PARCELIZE)
+    id(GradlePluginId.SAFE_ARGS)
 }
 
 android {
@@ -75,6 +76,10 @@ dependencies {
 
     implementation(libs.hiltandroid)
     kapt(libs.hiltcompiler)
+
+    // image processing
+    implementation(libs.glide)
+    kapt(libs.glidecompiler)
 
     // module
     implementation(project(Modules.domain)) {

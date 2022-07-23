@@ -15,21 +15,6 @@ class ArticleListAdapter(private val clickListener: OnClickListener) :
         fun bind(article: ArticleItem, clickListener: OnClickListener) {
             binding.article = article
             binding.clickListener = clickListener
-            val mediaList = article.mediaList
-            if (mediaList.isNotEmpty()) {
-                val mediaMetadataList = mediaList[0].mediaMetadataList
-                if (mediaMetadataList.isNotEmpty()) {
-                    val thumbnailImgUrl = mediaMetadataList[0].url
-                    /*binding.ivThumbnail.load(thumbnailImgUrl) {
-                        placeholder(R.drawable.loading_img)
-                        error(R.drawable.ic_broken_image)
-                        transformations(CircleCropTransformation())
-                    }*/
-                }
-            } else {
-//                binding.ivThumbnail.load(R.drawable.ic_broken_image)
-            }
-            binding.tvDate.text = article.publishedDate
             binding.executePendingBindings()
         }
     }

@@ -11,7 +11,7 @@
         android:label="ArticleListFragment"
         tools:layout="@layout/fragment_article_list">
         <action
-            android:id="@+id/action_articleListFragment_to_detailFragment"
+            android:id="@+id/action_list_to_detailFragment"
             app:destination="@id/articleDetailFragment" />
     </fragment>
     <fragment
