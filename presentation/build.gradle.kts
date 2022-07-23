@@ -1,3 +1,5 @@
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+
 plugins {
     id(GradlePluginId.ANDROID_APPLICATION)
     id(GradlePluginId.KOTLIN_ANDROID)
@@ -20,12 +22,19 @@ android {
     }
 
     buildTypes {
+        val properties = gradleLocalProperties(rootDir)
+        val apiKey = properties["apiKey"]
+
         getByName(BuildType.RELEASE) {
+            buildConfigField("String", "API_KEY", "\"$apiKey\"")
+
             isMinifyEnabled = BuildTypeRelease.isMinifyEnabled
             proguardFiles("proguard-android.txt", "proguard-rules.pro")
         }
 
         getByName(BuildType.DEBUG) {
+            buildConfigField("String", "API_KEY", "\"$apiKey\"")
+
             isMinifyEnabled = BuildTypeDebug.isMinifyEnabled
         }
 
@@ -63,10 +72,17 @@ dependencies {
     implementation(libs.appcompat)
     implementation(libs.recyclerview)
     implementation(libs.material)
-    implementation(libs.coroutines)
 
     implementation(libs.hiltandroid)
     kapt(libs.hiltcompiler)
+
+    // module
+    implementation(project(Modules.domain)) {
+        exclude(group = "com.inhouse.cleannytimesapp", module = "domain")
+    }
+    implementation(project(Modules.data)) {
+        exclude(group = "com.inhouse.cleannytimesapp", module = "data")
+    }
 
     testImplementation(libs.bundles.test)
     testRuntimeOnly(libs.junit.jupiter.engine)

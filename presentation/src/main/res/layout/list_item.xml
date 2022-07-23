@@ -7,7 +7,7 @@
 
         <variable
             name="article"
-            type="com.inhouse.cleannytimesapp.model.ArticleUiModel" />
+            type="com.inhouse.cleannytimesapp.model.ArticleItem" />
 
         <variable
             name="clickListener"

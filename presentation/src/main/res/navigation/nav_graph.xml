@@ -21,6 +21,6 @@
         tools:layout="@layout/fragment_article_detail">
         <argument
             android:name="selectedArticle"
-            app:argType="com.inhouse.cleannytimesapp.model.ArticleUiModel" />
+            app:argType="com.inhouse.cleannytimesapp.model.ArticleItem" />
     </fragment>
 </navigation>

@@ -29,8 +29,8 @@ pluginManagement {
         id("com.android.dynamic-feature") version agpVersion
 
         val kotlinVersion: String by settings
-        id("org.jetbrains.kotlin.jvm") version "1.7.10"
-        id("org.jetbrains.kotlin.android") version "1.7.10"
+        id("org.jetbrains.kotlin.jvm") version kotlinVersion
+        id("org.jetbrains.kotlin.android") version kotlinVersion
 
         val navigationVersion: String by settings
         id("androidx.navigation.safeargs.kotlin") version navigationVersion
@@ -73,14 +73,19 @@ dependencyResolutionManagement {
         create("libs") {
 
             val kotlinVersion: String by settings
-            version("kotlin", kotlinVersion)
+            version("kotlin-version", kotlinVersion)
             // Required by Android dynamic feature modules and SafeArgs
             alias("kotlin-reflect").to("org.jetbrains.kotlin", "kotlin-reflect")
-                .versionRef("kotlin")
+                .versionRef("kotlin-version")
+
             version("coroutines", "1.+")
             alias("coroutines").to("org.jetbrains.kotlinx", "kotlinx-coroutines-android")
                 .versionRef("coroutines")
+
             bundle("kotlin", listOf("kotlin-reflect", "coroutines"))
+
+
+            alias("kotlinstdlib").to("org.jetbrains.kotlin",  "kotlin-stdlib-jdk8").versionRef("kotlin-version")
 
             version("retrofit", "2.+")
             alias("retrofit-core").to("com.squareup.retrofit2", "retrofit").versionRef("retrofit")
@@ -179,15 +184,15 @@ dependencyResolutionManagement {
             alias("swiperefreshlayout").to("androidx.swiperefreshlayout", "swiperefreshlayout")
                 .versionRef("swiperefreshlayout-version")
 
-            // dagger and hilt version is same
-            val agpHiltVersion: String by settings
-            // Dagger 2
-            version("dagger-version", agpHiltVersion)
+
+            // Dagger 2 (version works only ** androidx.appcompat » appcompat	1.1.0)
+            version("dagger-version", "2.29.1")
             alias("daggerandroid").to("com.google.dagger", "dagger-android")
                 .versionRef("dagger-version")
             alias("daggersupport").to("com.google.dagger", "dagger-android-support")
                 .versionRef("dagger-version")
 
+            val agpHiltVersion: String by settings
             version("hilt-version", agpHiltVersion)
             alias("hiltandroid").to("com.google.dagger", "hilt-android").versionRef("hilt-version")
             alias("hiltcompiler").to("com.google.dagger", "hilt-android-compiler")

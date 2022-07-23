@@ -9,6 +9,8 @@ java {
 }
 
 dependencies {
-    implementation(libs.bundles.kotlin)
+    implementation(libs.kotlinstdlib)
+    implementation(libs.coroutines)
+
     implementation(libs.daggersupport)
 }

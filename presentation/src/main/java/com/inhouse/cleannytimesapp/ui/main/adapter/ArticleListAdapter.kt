@@ -6,13 +6,13 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.inhouse.cleannytimesapp.databinding.ListItemBinding
-import com.inhouse.cleannytimesapp.model.ArticleUiModel
+import com.inhouse.cleannytimesapp.model.ArticleItem
 
 class ArticleListAdapter(private val clickListener: OnClickListener) :
-    ListAdapter<ArticleUiModel, ArticleListAdapter.ArticleViewHolder>(ArticleItemDiffCallback()) {
+    ListAdapter<ArticleItem, ArticleListAdapter.ArticleViewHolder>(ArticleItemDiffCallback()) {
     class ArticleViewHolder(private val binding: ListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(article: ArticleUiModel, clickListener: OnClickListener) {
+        fun bind(article: ArticleItem, clickListener: OnClickListener) {
             binding.article = article
             binding.clickListener = clickListener
             val mediaList = article.mediaList
@@ -35,14 +35,14 @@ class ArticleListAdapter(private val clickListener: OnClickListener) :
     }
 
     interface OnClickListener {
-        fun onClick(article: ArticleUiModel)
+        fun onClick(article: ArticleItem)
     }
 
-    class ArticleItemDiffCallback : DiffUtil.ItemCallback<ArticleUiModel>() {
-        override fun areItemsTheSame(oldItem: ArticleUiModel, newItem: ArticleUiModel): Boolean =
+    class ArticleItemDiffCallback : DiffUtil.ItemCallback<ArticleItem>() {
+        override fun areItemsTheSame(oldItem: ArticleItem, newItem: ArticleItem): Boolean =
             oldItem == newItem
 
-        override fun areContentsTheSame(oldItem: ArticleUiModel, newItem: ArticleUiModel): Boolean =
+        override fun areContentsTheSame(oldItem: ArticleItem, newItem: ArticleItem): Boolean =
             oldItem.id == newItem.id
 
     }

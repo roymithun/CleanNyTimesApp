@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.inhouse.cleannytimesapp.R
 import com.inhouse.cleannytimesapp.databinding.FragmentArticleListBinding
-import com.inhouse.cleannytimesapp.model.ArticleUiModel
+import com.inhouse.cleannytimesapp.model.ArticleItem
 import com.inhouse.cleannytimesapp.ui.main.adapter.ArticleListAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -104,7 +104,7 @@ class ArticleListFragment : Fragment() {
 
     private fun configureRecyclerView(recyclerView: RecyclerView) {
         articleListAdapter = ArticleListAdapter(object : ArticleListAdapter.OnClickListener {
-            override fun onClick(article: ArticleUiModel) {
+            override fun onClick(article: ArticleItem) {
 //                articleListViewModel.showArticleDetail(article)
             }
         })
