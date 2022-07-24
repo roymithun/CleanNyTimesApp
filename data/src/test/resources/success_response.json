@@ -1,0 +1,1185 @@
+{
+  "status": "OK",
+  "copyright": "Copyright (c) 2022 The New York Times Company.  All Rights Reserved.",
+  "num_results": 20,
+  "results": [
+    {
+      "uri": "nyt://article/331b9c9e-eeb6-5025-ba5a-5c1f78a40fd5",
+      "url": "https://www.nytimes.com/2022/07/20/style/ivana-trump-funeral.html",
+      "id": 100000008452677,
+      "asset_id": 100000008452677,
+      "source": "New York Times",
+      "published_date": "2022-07-20",
+      "updated": "2022-07-22 11:33:36",
+      "section": "Style",
+      "subsection": "",
+      "nytdsection": "style",
+      "adx_keywords": "Funerals and Memorials;Trump, Ivana;Trump, Donald J;Trump, Donald J Jr;Trump, Ivanka;Trump, Eric F (1984- );Trump Organization;Manhattan (NYC)",
+      "column": null,
+      "byline": "By Jacob Bernstein",
+      "type": "Article",
+      "title": "At Ivana Trump’s Funeral, a Gold-Hued Coffin and the Secret Service",
+      "abstract": "“People adored Ivana.”",
+      "des_facet": [
+        "Funerals and Memorials"
+      ],
+      "org_facet": [
+        "Trump Organization"
+      ],
+      "per_facet": [
+        "Trump, Ivana",
+        "Trump, Donald J",
+        "Trump, Donald J Jr",
+        "Trump, Ivanka",
+        "Trump, Eric F (1984- )"
+      ],
+      "geo_facet": [
+        "Manhattan (NYC)"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Former President Donald J. Trump and his family at Ivana Trump’s funeral.",
+          "copyright": "Michael M. Santiago/Getty Images",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2022/07/20/fashion/20IVANA-FUNERAL1/20IVANA-FUNERAL1-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/20/fashion/20IVANA-FUNERAL1/merlin_210358971_77cf7512-85a6-43df-8a98-a1481ba77376-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/20/fashion/20IVANA-FUNERAL1/merlin_210358971_77cf7512-85a6-43df-8a98-a1481ba77376-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/1acdfae4-341e-59d6-8cd0-660412d8797b",
+      "url": "https://www.nytimes.com/2022/07/16/arts/television/jak-knight-dead.html",
+      "id": 100000008447462,
+      "asset_id": 100000008447462,
+      "source": "New York Times",
+      "published_date": "2022-07-16",
+      "updated": "2022-07-17 22:38:11",
+      "section": "Arts",
+      "subsection": "Television",
+      "nytdsection": "arts",
+      "adx_keywords": "Deaths (Obituaries);Comedy and Humor;Knight, Jak",
+      "column": null,
+      "byline": "By McKenna Oxenden",
+      "type": "Article",
+      "title": "Jak Knight, Known for the Netflix Series ‘Big Mouth,’ Dies at 28",
+      "abstract": "Mr. Knight, who had been a successful stand-up comedian for several years, was also a writer for the ABC sitcom “Black-ish.”",
+      "des_facet": [
+        "Deaths (Obituaries)",
+        "Comedy and Humor"
+      ],
+      "org_facet": [],
+      "per_facet": [
+        "Knight, Jak"
+      ],
+      "geo_facet": [],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Jak Knight performing at the TBS Comedy Festival in New York in 2017. He was nominated for a Writers Guild of America award for his work on the HBO talk show “Pause with Sam Jay.”",
+          "copyright": "Jason Kempin/Getty Images for TBS",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2022/07/18/arts/16xp-knight-1/16xp-knight-1-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/18/arts/16xp-knight-1/16xp-knight-1-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/18/arts/16xp-knight-1/16xp-knight-1-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/6a96518c-4a38-51a1-8c28-f5adc0830c0f",
+      "url": "https://www.nytimes.com/2022/07/15/well/live/covid-vaccines-periods.html",
+      "id": 100000008441981,
+      "asset_id": 100000008441981,
+      "source": "New York Times",
+      "published_date": "2022-07-15",
+      "updated": "2022-07-19 08:32:36",
+      "section": "Well",
+      "subsection": "Live",
+      "nytdsection": "well",
+      "adx_keywords": "Menstruation;Coronavirus (2019-nCoV);Vaccination and Immunization;Clinical Trials;Content Type: Service;Research;Hormones;Menopause;Immune System;Science Advances (Journal)",
+      "column": null,
+      "byline": "By Knvul Sheikh",
+      "type": "Article",
+      "title": "Largest Study to Date Shows How Covid Vaccines Affect Periods",
+      "abstract": "For some, a side effect of getting vaccinated was a change in menstrual cycles — but experts say there is no cause for alarm.",
+      "des_facet": [
+        "Menstruation",
+        "Coronavirus (2019-nCoV)",
+        "Vaccination and Immunization",
+        "Clinical Trials",
+        "Content Type: Service",
+        "Research",
+        "Hormones",
+        "Menopause",
+        "Immune System"
+      ],
+      "org_facet": [
+        "Science Advances (Journal)"
+      ],
+      "per_facet": [],
+      "geo_facet": [],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Jon Cherry for The New York Times",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2022/07/15/well/15WELL-PERIODS-VACCINE1/15WELL-PERIODS-VACCINE1-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/15/well/15WELL-PERIODS-VACCINE1/merlin_187714749_17875006-ce24-4d6e-b660-6297f1e46d10-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/15/well/15WELL-PERIODS-VACCINE1/merlin_187714749_17875006-ce24-4d6e-b660-6297f1e46d10-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/5f2ab896-388b-5ad0-bac2-59ec9d94b3d2",
+      "url": "https://www.nytimes.com/2022/07/15/nyregion/ivana-trump-cause-of-death.html",
+      "id": 100000008446932,
+      "asset_id": 100000008446932,
+      "source": "New York Times",
+      "published_date": "2022-07-15",
+      "updated": "2022-07-17 00:12:11",
+      "section": "New York",
+      "subsection": "",
+      "nytdsection": "new york",
+      "adx_keywords": "Trump, Ivana;Trump, Donald J;New York City",
+      "column": null,
+      "byline": "By Ed Shanahan",
+      "type": "Article",
+      "title": "Ivana Trump’s Death Is Ruled Accidental",
+      "abstract": "Ms. Trump, an ex-wife of former President Donald J. Trump, died by blunt impact injuries, according to New York City’s chief medical examiner.",
+      "des_facet": [],
+      "org_facet": [],
+      "per_facet": [
+        "Trump, Ivana",
+        "Trump, Donald J"
+      ],
+      "geo_facet": [
+        "New York City"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Ivana Trump, who was a fixture on New York City’s social scene for decades, was found dead at her home on the Upper East Side on Thursday.",
+          "copyright": "Jason Decrow/Associated Press",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2022/07/15/multimedia/15NY-Ivana-death/15NY-Ivana-death-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/15/multimedia/15NY-Ivana-death/15NY-Ivana-death-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/15/multimedia/15NY-Ivana-death/15NY-Ivana-death-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/f5c45f2f-ea3f-50ca-94b0-3e585c7e7ab4",
+      "url": "https://www.nytimes.com/2022/07/14/nyregion/ivana-trump-dead.html",
+      "id": 100000008444686,
+      "asset_id": 100000008444686,
+      "source": "New York Times",
+      "published_date": "2022-07-14",
+      "updated": "2022-07-20 22:46:26",
+      "section": "New York",
+      "subsection": "",
+      "nytdsection": "new york",
+      "adx_keywords": "Deaths (Obituaries);Books and Literature;Trump, Ivana;Trump, Donald J;Trump Organization;Trump Tower (Manhattan, NY)",
+      "column": null,
+      "byline": "By Clay Risen",
+      "type": "Article",
+      "title": "Ivana Trump, Ex-Wife of Donald Trump and Businesswoman, Dies at 73",
+      "abstract": "She helped build his real estate empire, though she was better known for being one half of the quintessential 1980s power couple.",
+      "des_facet": [
+        "Deaths (Obituaries)",
+        "Books and Literature"
+      ],
+      "org_facet": [
+        "Trump Organization",
+        "Trump Tower (Manhattan, NY)"
+      ],
+      "per_facet": [
+        "Trump, Ivana",
+        "Trump, Donald J"
+      ],
+      "geo_facet": [],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Ivana and Donald J. Trump in 1985. He announced her death on his social media platform.",
+          "copyright": "Ron Galella via Getty Images",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2022/07/15/obituaries/15ivanatrump-A1-SUB/14Trump1-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/15/obituaries/15ivanatrump-A1-SUB/14Trump1-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/15/obituaries/15ivanatrump-A1-SUB/14Trump1-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/76046bbf-bb8a-5fb9-9e72-c853fe4b6266",
+      "url": "https://www.nytimes.com/2022/07/18/well/eat/teeth-decay-food-drinks.html",
+      "id": 100000008424865,
+      "asset_id": 100000008424865,
+      "source": "New York Times",
+      "published_date": "2022-07-18",
+      "updated": "2022-07-20 13:38:30",
+      "section": "Well",
+      "subsection": "Eat",
+      "nytdsection": "well",
+      "adx_keywords": "Content Type: Service;Teeth and Dentistry;Fluorides;Food;Fruit;Sugar;Bacteria;Diet and Nutrition;Acids;Vegetables;Xylitol",
+      "column": null,
+      "byline": "By Hannah Seo",
+      "type": "Article",
+      "title": "The Worst Foods and Drinks for Your Teeth",
+      "abstract": "When assessing how likely a given meal, snack or drink is to harm your dental health, there are two main things to consider, experts say.",
+      "des_facet": [
+        "Content Type: Service",
+        "Teeth and Dentistry",
+        "Fluorides",
+        "Food",
+        "Fruit",
+        "Sugar",
+        "Bacteria",
+        "Diet and Nutrition",
+        "Acids",
+        "Vegetables",
+        "Xylitol"
+      ],
+      "org_facet": [],
+      "per_facet": [],
+      "geo_facet": [],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Kelsey McClellan for The New York Times",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2022/07/14/well/14WELL-TEETH3/14WELL-TEETH3-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/14/well/14WELL-TEETH3/14WELL-TEETH3-mediumThreeByTwo210-v2.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/14/well/14WELL-TEETH3/14WELL-TEETH3-mediumThreeByTwo440-v2.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/0745c61d-ff23-50f6-84ef-2773abcae074",
+      "url": "https://www.nytimes.com/2022/07/18/us/greenwood-indiana-mall-shooting.html",
+      "id": 100000008449434,
+      "asset_id": 100000008449434,
+      "source": "New York Times",
+      "published_date": "2022-07-18",
+      "updated": "2022-07-19 09:52:25",
+      "section": "U.S.",
+      "subsection": "",
+      "nytdsection": "u.s.",
+      "adx_keywords": "Greenwood, Ind, Mall Shooting (2022);Sapirman, Jonathan Douglas;Dicken, Elisjsha (2000- );Greenwood (Ind)",
+      "column": null,
+      "byline": "By Eliza Fawcett",
+      "type": "Article",
+      "title": "Bystander Killed Gunman 2 Minutes Into Indiana Mall Shooting",
+      "abstract": "The gunman used a rifle to kill three people and injure two others before he was shot dead. He had spent an hour inside a mall bathroom apparently preparing for the attack.",
+      "des_facet": [
+        "Greenwood, Ind, Mall Shooting (2022)"
+      ],
+      "org_facet": [],
+      "per_facet": [
+        "Sapirman, Jonathan Douglas",
+        "Dicken, Elisjsha (2000- )"
+      ],
+      "geo_facet": [
+        "Greenwood (Ind)"
+      ],
+      "media": [],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/13dfad2d-5a94-5f1e-ac74-1ab40be3824b",
+      "url": "https://www.nytimes.com/2022/07/17/us/greenwood-mall-shooting-indiana.html",
+      "id": 100000008448181,
+      "asset_id": 100000008448181,
+      "source": "New York Times",
+      "published_date": "2022-07-17",
+      "updated": "2022-07-21 15:15:46",
+      "section": "U.S.",
+      "subsection": "",
+      "nytdsection": "u.s.",
+      "adx_keywords": "Shopping Centers and Malls;Greenwood, Ind, Mall Shooting (2022);Indiana;Greenwood (Ind)",
+      "column": null,
+      "byline": "By Vimal Patel and Melina Delkic",
+      "type": "Article",
+      "title": "4 Dead in Indiana Mall Shooting, Officials Say",
+      "abstract": "The attack by a gunman unfolded at the Greenwood Park Mall in Greenwood, Ind., on Sunday before another armed man fatally shot the assailant, city officials said.",
+      "des_facet": [
+        "Shopping Centers and Malls",
+        "Greenwood, Ind, Mall Shooting (2022)"
+      ],
+      "org_facet": [],
+      "per_facet": [],
+      "geo_facet": [
+        "Indiana",
+        "Greenwood (Ind)"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Two additional people were hospitalized in the shooting, city officials said. The authorities did not indicate a motive for the shooting.",
+          "copyright": "Lee Klafczynski for The New York Times",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2022/07/17/us/17xp-greenwood-mall1/17xp-greenwood-mall1-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/17/us/17xp-greenwood-mall1/17xp-greenwood-mall1-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/17/us/17xp-greenwood-mall1/17xp-greenwood-mall1-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/cefacb39-7fce-5550-8122-2480ece9aaac",
+      "url": "https://www.nytimes.com/2022/07/18/us/covid-us-outlook.html",
+      "id": 100000008440428,
+      "asset_id": 100000008440428,
+      "source": "New York Times",
+      "published_date": "2022-07-18",
+      "updated": "2022-07-19 05:02:55",
+      "section": "U.S.",
+      "subsection": "",
+      "nytdsection": "u.s.",
+      "adx_keywords": "Coronavirus (2019-nCoV);Deaths (Fatalities);Coronavirus Omicron Variant;Disease Rates;Masks;Centers for Disease Control and Prevention;United States",
+      "column": null,
+      "byline": "By Julie Bosman, Thomas Fuller and Edgar Sandoval",
+      "type": "Article",
+      "title": "Covid Rises Across U.S. Amid Muted Warnings and Murky Data",
+      "abstract": "BA.5, a highly transmissible variant, is dominating a surge of new infections. Many health officials say the wave is cause for caution, not alarm.",
+      "des_facet": [
+        "Coronavirus (2019-nCoV)",
+        "Deaths (Fatalities)",
+        "Coronavirus Omicron Variant",
+        "Disease Rates",
+        "Masks"
+      ],
+      "org_facet": [
+        "Centers for Disease Control and Prevention"
+      ],
+      "per_facet": [],
+      "geo_facet": [
+        "United States"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Downtown Chicago last week as virus cases rose once more.",
+          "copyright": "Jamie Kelter Davis for The New York Times",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2022/07/17/us/17stateofthevirus-1/17stateofthevirus-1-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/17/us/17stateofthevirus-1/merlin_210087000_cb2ce3df-3b4b-455e-9597-87379470eae6-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/17/us/17stateofthevirus-1/merlin_210087000_cb2ce3df-3b4b-455e-9597-87379470eae6-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/605d0588-a113-5046-b2b3-f34a229b887c",
+      "url": "https://www.nytimes.com/2022/07/17/arts/jennifer-lopez-ben-affleck-married.html",
+      "id": 100000008448010,
+      "asset_id": 100000008448010,
+      "source": "New York Times",
+      "published_date": "2022-07-17",
+      "updated": "2022-07-18 13:13:59",
+      "section": "Arts",
+      "subsection": "",
+      "nytdsection": "arts",
+      "adx_keywords": "Weddings and Engagements;Movies;Actors and Actresses;Affleck, Ben;Lopez, Jennifer;Little White Wedding Chapel (Las Vegas, Nev);Las Vegas (Nev)",
+      "column": null,
+      "byline": "By Melina Delkic",
+      "type": "Article",
+      "title": "Jennifer Lopez and Ben Affleck Have a Low-Key Midnight Wedding in Las Vegas",
+      "abstract": "The superstar couple, who got back together last year, waited in line and went to a chapel that Lopez said “graciously stayed open” a few minutes past midnight so they could wed.",
+      "des_facet": [
+        "Weddings and Engagements",
+        "Movies",
+        "Actors and Actresses"
+      ],
+      "org_facet": [
+        "Little White Wedding Chapel (Las Vegas, Nev)"
+      ],
+      "per_facet": [
+        "Affleck, Ben",
+        "Lopez, Jennifer"
+      ],
+      "geo_facet": [
+        "Las Vegas (Nev)"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Jennifer Lopez and Ben Affleck attending a special screening of the film “Marry Me” in Los Angeles in February. They married in Las Vegas over the weekend.",
+          "copyright": "Mario Anzuoni/Reuters",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2022/07/17/multimedia/17xp-bennifer/17xp-bennifer-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/17/multimedia/17xp-bennifer/17xp-bennifer-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/17/multimedia/17xp-bennifer/17xp-bennifer-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/d52e484c-5ab9-5bd0-ab4c-ac86644272df",
+      "url": "https://www.nytimes.com/2022/07/19/business/media/netflix-earnings.html",
+      "id": 100000008449908,
+      "asset_id": 100000008449908,
+      "source": "New York Times",
+      "published_date": "2022-07-19",
+      "updated": "2022-07-20 11:15:21",
+      "section": "Business",
+      "subsection": "Media",
+      "nytdsection": "business",
+      "adx_keywords": "Company Reports;Video Recordings, Downloads and Streaming;Movies;Television;Advertising and Marketing;Netflix Inc",
+      "column": null,
+      "byline": "By Nicole Sperling",
+      "type": "Article",
+      "title": "Netflix Says It Lost Nearly 1 Million Subscribers, and Breathes a Sigh of Relief",
+      "abstract": "The streaming giant, facing significant headwinds, had said it expected to lose two million subscribers in the second quarter.",
+      "des_facet": [
+        "Company Reports",
+        "Video Recordings, Downloads and Streaming",
+        "Movies",
+        "Television",
+        "Advertising and Marketing"
+      ],
+      "org_facet": [
+        "Netflix Inc"
+      ],
+      "per_facet": [],
+      "geo_facet": [],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "“Stranger Things” had a strong fourth season, helping to buoy results for Netflix.",
+          "copyright": "Netflix, via Associated Press",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2022/07/20/multimedia/19JPnetflix-print/19netflix-alt-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/20/multimedia/19JPnetflix-print/19netflix-alt-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/20/multimedia/19JPnetflix-print/19netflix-alt-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/a7cb8761-128e-5669-9b00-78d6c32b76e3",
+      "url": "https://www.nytimes.com/2022/07/21/us/kentucky-bunker-civil-war.html",
+      "id": 100000008396967,
+      "asset_id": 100000008396967,
+      "source": "New York Times",
+      "published_date": "2022-07-21",
+      "updated": "2022-07-22 17:23:19",
+      "section": "U.S.",
+      "subsection": "",
+      "nytdsection": "u.s.",
+      "adx_keywords": "Murders, Attempted Murders and Homicides;Politics and Government;Content Type: Personal Profile;Real Estate and Housing (Residential);Doomsday;audio-neutral-immersive;Morgan, C Wesley;Gilday, Shannon V;Kentucky;Richmond (Ky)",
+      "column": null,
+      "byline": "By Campbell Robertson",
+      "type": "Article",
+      "title": "He Built a Home to Survive a Civil War. Tragedy Found Him Anyway.",
+      "abstract": "C. Wesley Morgan once believed that the place he built, which included a 2,000-square-foot bunker, was the safest house in Kentucky.",
+      "des_facet": [
+        "Murders, Attempted Murders and Homicides",
+        "Politics and Government",
+        "Content Type: Personal Profile",
+        "Real Estate and Housing (Residential)",
+        "Doomsday",
+        "audio-neutral-immersive"
+      ],
+      "org_facet": [],
+      "per_facet": [
+        "Morgan, C Wesley",
+        "Gilday, Shannon V"
+      ],
+      "geo_facet": [
+        "Kentucky",
+        "Richmond (Ky)"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "The mansion belonging to C. Wesley Morgan, a former Kentucky state representative.",
+          "copyright": "Luke Sharrett for The New York Times",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2022/07/22/us/KENTUCKY-MURDER-1/KENTUCKY-MURDER-1-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/22/us/KENTUCKY-MURDER-1/KENTUCKY-MURDER-1-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/22/us/KENTUCKY-MURDER-1/KENTUCKY-MURDER-1-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/a0ebbb30-581d-55ca-8937-4b1c644eeca4",
+      "url": "https://www.nytimes.com/2022/07/14/movies/janeane-garofalo.html",
+      "id": 100000008428897,
+      "asset_id": 100000008428897,
+      "source": "New York Times",
+      "published_date": "2022-07-14",
+      "updated": "2022-07-16 22:26:30",
+      "section": "Movies",
+      "subsection": "",
+      "nytdsection": "movies",
+      "adx_keywords": "Comedy and Humor;Actors and Actresses;Content Type: Personal Profile;Movies;Garofalo, Janeane",
+      "column": null,
+      "byline": "By Jason Zinoman",
+      "type": "Article",
+      "title": "Janeane Garofalo Never Sold Out. What a Relief.",
+      "abstract": "That concept might be the reason her trailblazing stand-up career has been overshadowed; it may also be the reason she’s still so sharp, our critic argues.",
+      "des_facet": [
+        "Comedy and Humor",
+        "Actors and Actresses",
+        "Content Type: Personal Profile",
+        "Movies"
+      ],
+      "org_facet": [],
+      "per_facet": [
+        "Garofalo, Janeane"
+      ],
+      "geo_facet": [],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Janeane Garofalo after a show in Brooklyn. In the ’90s she played a crucial role in turning stand-up comedy away from the polished, tight sets ready-made for a sitcom or TV appearance.",
+          "copyright": "Luisa Opalesky for The New York Times",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2022/07/17/arts/17COMEDY-GAROFALO1/17COMEDY-GAROFALO1-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/17/arts/17COMEDY-GAROFALO1/17COMEDY-GAROFALO1-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/17/arts/17COMEDY-GAROFALO1/17COMEDY-GAROFALO1-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/c8519fcd-1077-5235-a7a1-df9639685f83",
+      "url": "https://www.nytimes.com/2022/07/22/opinion/covid-omicron-variants-reinfection.html",
+      "id": 100000008450298,
+      "asset_id": 100000008450298,
+      "source": "New York Times",
+      "published_date": "2022-07-22",
+      "updated": "2022-07-23 12:03:40",
+      "section": "Opinion",
+      "subsection": "",
+      "nytdsection": "opinion",
+      "adx_keywords": "Coronavirus (2019-nCoV);Coronavirus Omicron Variant;Coronavirus Risks and Safety Concerns;Immune System;Vaccination and Immunization;Antibodies;Disease Rates;United States",
+      "column": null,
+      "byline": "By Jeremy Kamil",
+      "type": "Article",
+      "title": "I’m a Virologist, and I’m Setting the Record Straight on Variants and Reinfections",
+      "abstract": "There has yet to be a variant that negates the benefits of vaccines.",
+      "des_facet": [
+        "Coronavirus (2019-nCoV)",
+        "Coronavirus Omicron Variant",
+        "Coronavirus Risks and Safety Concerns",
+        "Immune System",
+        "Vaccination and Immunization",
+        "Antibodies",
+        "Disease Rates"
+      ],
+      "org_facet": [],
+      "per_facet": [],
+      "geo_facet": [
+        "United States"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Stephane Mahe/Reuters",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2022/07/22/multimedia/22Kamil_1/22Kamil_1-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/22/multimedia/22Kamil_1/22Kamil_1-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/22/multimedia/22Kamil_1/22Kamil_1-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/b5211184-4ff3-5779-afb8-5e63865781a1",
+      "url": "https://www.nytimes.com/2022/07/22/us/politics/bannon-trial-contempt-charges.html",
+      "id": 100000008453540,
+      "asset_id": 100000008453540,
+      "source": "New York Times",
+      "published_date": "2022-07-22",
+      "updated": "2022-07-22 22:53:25",
+      "section": "U.S.",
+      "subsection": "Politics",
+      "nytdsection": "u.s.",
+      "adx_keywords": "Subpoenas;Storming of the US Capitol (Jan, 2021);United States Politics and Government;Decisions and Verdicts;Bannon, Stephen K;House Select Committee to Investigate the January 6th Attack",
+      "column": null,
+      "byline": "By Aishvarya Kavi and Alan Feuer",
+      "type": "Article",
+      "title": "Bannon Found Guilty of Contempt in Case Related to Capitol Riot Inquiry",
+      "abstract": "He is the first close aide to former President Donald J. Trump to be convicted as a result of one of the investigations into the Jan. 6 attack.",
+      "des_facet": [
+        "Subpoenas",
+        "Storming of the US Capitol (Jan, 2021)",
+        "United States Politics and Government",
+        "Decisions and Verdicts"
+      ],
+      "org_facet": [
+        "House Select Committee to Investigate the January 6th Attack"
+      ],
+      "per_facet": [
+        "Bannon, Stephen K"
+      ],
+      "geo_facet": [],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "The question of Stephen K. Bannon’s guilt or innocence ultimately turned on whether he had defied the House committee by flouting its subpoena.",
+          "copyright": "Kenny Holston for The New York Times",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2022/07/22/us/politics/22dc-bannon-2/merlin_210368556_05a07a89-d9b4-4bae-9cb1-af8ad2e4049b-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/22/us/politics/22dc-bannon-2/merlin_210368556_05a07a89-d9b4-4bae-9cb1-af8ad2e4049b-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/22/us/politics/22dc-bannon-2/merlin_210368556_05a07a89-d9b4-4bae-9cb1-af8ad2e4049b-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/5ea35692-5f5a-5d43-aa88-efd744905612",
+      "url": "https://www.nytimes.com/2022/07/19/nyregion/law-and-order-crew-member-shot.html",
+      "id": 100000008450750,
+      "asset_id": 100000008450750,
+      "source": "New York Times",
+      "published_date": "2022-07-19",
+      "updated": "2022-07-20 12:10:20",
+      "section": "New York",
+      "subsection": "",
+      "nytdsection": "new york",
+      "adx_keywords": "Television;Murders, Attempted Murders and Homicides;Universal Television;National Broadcasting Co;Greenpoint (Brooklyn, NY)",
+      "column": null,
+      "byline": "By Ed Shanahan",
+      "type": "Article",
+      "title": "‘Law & Order’ Crew Member Is Fatally Shot at Brooklyn Film Location",
+      "abstract": "The man, who was enforcing parking restrictions on a Greenpoint block before filming was set to begin on Tuesday, was sitting in a car when he was killed by a lone gunman.",
+      "des_facet": [
+        "Television",
+        "Murders, Attempted Murders and Homicides"
+      ],
+      "org_facet": [
+        "Universal Television",
+        "National Broadcasting Co"
+      ],
+      "per_facet": [],
+      "geo_facet": [
+        "Greenpoint (Brooklyn, NY)"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Investigators on the Brooklyn block where a man working on “Law & Order: Organized Crime” was fatally shot. ",
+          "copyright": "Dakota Santiago for The New York Times",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2022/07/19/multimedia/19lawandorder-killing1/19lawandorder-killing1-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/19/multimedia/19lawandorder-killing1/19lawandorder-killing1-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/19/multimedia/19lawandorder-killing1/19lawandorder-killing1-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/81fd2cd8-dd6a-536c-9e26-5b9ffd319526",
+      "url": "https://www.nytimes.com/2022/07/21/us/politics/electoral-count-act-senate.html",
+      "id": 100000008452418,
+      "asset_id": 100000008452418,
+      "source": "New York Times",
+      "published_date": "2022-07-20",
+      "updated": "2022-07-21 19:42:12",
+      "section": "U.S.",
+      "subsection": "Politics",
+      "nytdsection": "u.s.",
+      "adx_keywords": "Electoral Count Act (1887);Law and Legislation;Electoral College;Vice Presidents and Vice Presidency (US);Presidential Election of 2020;Presidential Transition (US);Storming of the US Capitol (Jan, 2021);United States Politics and Government;Collins, Susan M;Manchin, Joe III;Trump, Donald J;Pence, Mike;Senate;Democratic Party;Republican Party",
+      "column": null,
+      "byline": "By Carl Hulse",
+      "type": "Article",
+      "title": "Bipartisan Senate Group Strikes Deal to Rewrite Electoral Count Act",
+      "abstract": "The changes outlined by the senators are intended to prevent a repeat of the effort on Jan. 6, 2021, to overturn the presidential election in Congress.",
+      "des_facet": [
+        "Electoral Count Act (1887)",
+        "Law and Legislation",
+        "Electoral College",
+        "Vice Presidents and Vice Presidency (US)",
+        "Presidential Election of 2020",
+        "Presidential Transition (US)",
+        "Storming of the US Capitol (Jan, 2021)",
+        "United States Politics and Government"
+      ],
+      "org_facet": [
+        "Senate",
+        "Democratic Party",
+        "Republican Party"
+      ],
+      "per_facet": [
+        "Collins, Susan M",
+        "Manchin, Joe III",
+        "Trump, Donald J",
+        "Pence, Mike"
+      ],
+      "geo_facet": [],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Voters in Story County, Iowa, in 2020. The new legislation focuses on the handling of electoral votes and does not incorporate wider voting protections.",
+          "copyright": "Kathryn Gamble for The New York Times",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2022/07/20/us/politics/20dc-electoralcount-1/merlin_179543676_d93e17e0-001c-4044-b05e-82ea4ba2899a-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/20/us/politics/20dc-electoralcount-1/merlin_179543676_d93e17e0-001c-4044-b05e-82ea4ba2899a-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/20/us/politics/20dc-electoralcount-1/merlin_179543676_d93e17e0-001c-4044-b05e-82ea4ba2899a-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/d8c86411-7500-5fd2-afe5-016861c42fcb",
+      "url": "https://www.nytimes.com/2022/07/16/us/politics/trump-olson-lindell-election.html",
+      "id": 100000008442161,
+      "asset_id": 100000008442161,
+      "source": "New York Times",
+      "published_date": "2022-07-16",
+      "updated": "2022-07-17 00:13:20",
+      "section": "U.S.",
+      "subsection": "Politics",
+      "nytdsection": "u.s.",
+      "adx_keywords": "Voter Fraud (Election Fraud);Conspiracy Theories;Legal Profession;Presidential Election of 2020;United States Politics and Government;Olson, William J (1949- );Trump, Donald J;Justice Department;House Select Committee to Investigate the January 6th Attack",
+      "column": null,
+      "byline": "By Maggie Haberman and Luke Broadwater",
+      "type": "Article",
+      "title": "Little-Known Lawyer Pitched Trump on Extreme Plans to Subvert Election",
+      "abstract": "The role of William J. Olson in advising the president in late 2020, which has not previously been disclosed, shows how fringe figures were influencing him at a critical time.",
+      "des_facet": [
+        "Voter Fraud (Election Fraud)",
+        "Conspiracy Theories",
+        "Legal Profession",
+        "Presidential Election of 2020",
+        "United States Politics and Government"
+      ],
+      "org_facet": [
+        "Justice Department",
+        "House Select Committee to Investigate the January 6th Attack"
+      ],
+      "per_facet": [
+        "Olson, William J (1949- )",
+        "Trump, Donald J"
+      ],
+      "geo_facet": [],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "William J. Olson, a conservative lawyer, in 2010 at a Senate hearing. Mr. Olson promoted far-reaching ideas to President Donald J. Trump on executive powers.",
+          "copyright": "Pablo Martinez Monsivais/Associated Press",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2022/07/16/us/politics/16dc-olson-1/16dc-olson-1-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/16/us/politics/16dc-olson-1/16dc-olson-1-mediumThreeByTwo210-v2.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/16/us/politics/16dc-olson-1/16dc-olson-1-mediumThreeByTwo440-v2.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/f049ed8f-d0d8-5fe5-b1ce-abcffb435bf1",
+      "url": "https://www.nytimes.com/2022/07/19/us/politics/house-gay-marriage-bill.html",
+      "id": 100000008450466,
+      "asset_id": 100000008450466,
+      "source": "New York Times",
+      "published_date": "2022-07-19",
+      "updated": "2022-07-22 13:18:26",
+      "section": "U.S.",
+      "subsection": "Politics",
+      "nytdsection": "u.s.",
+      "adx_keywords": "Same-Sex Marriage, Civil Unions and Domestic Partnerships;Law and Legislation;Defense of Marriage Act (1996);United States Politics and Government;House of Representatives;Supreme Court (US)",
+      "column": null,
+      "byline": "By Stephanie Lai",
+      "type": "Article",
+      "title": "House Moves to Protect Same-Sex Marriage From Supreme Court Reversal",
+      "abstract": "The legislation, which garnered some Republican support, would recognize same-sex marriages at the federal level. It faces an uncertain path in the Senate.",
+      "des_facet": [
+        "Same-Sex Marriage, Civil Unions and Domestic Partnerships",
+        "Law and Legislation",
+        "Defense of Marriage Act (1996)",
+        "United States Politics and Government"
+      ],
+      "org_facet": [
+        "House of Representatives",
+        "Supreme Court (US)"
+      ],
+      "per_facet": [],
+      "geo_facet": [],
+      "media": [],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/68722271-3d3a-5a66-8e42-cd001e0af3df",
+      "url": "https://www.nytimes.com/2022/07/17/business/media/netflix-the-gray-man-subscribers.html",
+      "id": 100000008445289,
+      "asset_id": 100000008445289,
+      "source": "New York Times",
+      "published_date": "2022-07-17",
+      "updated": "2022-07-18 23:05:45",
+      "section": "Business",
+      "subsection": "Media",
+      "nytdsection": "business",
+      "adx_keywords": "Movies;Video Recordings, Downloads and Streaming;Box Office Sales;Russo, Anthony;Russo, Joe;Evans, Chris (1981- );Gosling, Ryan;Stuber, Scott;Netflix Inc",
+      "column": null,
+      "byline": "By Nicole Sperling",
+      "type": "Article",
+      "title": "Netflix, Still Reeling, Bets Big on ‘The Gray Man’",
+      "abstract": "The streaming service hopes its latest release can be the start of a blockbuster franchise that attracts much-needed subscribers.",
+      "des_facet": [
+        "Movies",
+        "Video Recordings, Downloads and Streaming",
+        "Box Office Sales"
+      ],
+      "org_facet": [
+        "Netflix Inc"
+      ],
+      "per_facet": [
+        "Russo, Anthony",
+        "Russo, Joe",
+        "Evans, Chris (1981- )",
+        "Gosling, Ryan",
+        "Stuber, Scott"
+      ],
+      "geo_facet": [],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Ryan Gosling stars in “The Gray Man,” which Netflix will start streaming on Friday.",
+          "copyright": "Netflix",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2022/07/17/business/17Netflix-gray-filming/17Netflix-gray-filming-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/17/business/17Netflix-gray-filming/17Netflix-gray-filming-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/07/17/business/17Netflix-gray-filming/17Netflix-gray-filming-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    }
+  ]
+}

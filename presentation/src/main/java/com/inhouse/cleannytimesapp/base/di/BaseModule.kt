@@ -12,5 +12,5 @@ import javax.inject.Singleton
 object BaseModule {
     @Singleton
     @Provides
-    fun navManager() = NavManager()
+    fun navManager(): NavManager = NavManager()
 }

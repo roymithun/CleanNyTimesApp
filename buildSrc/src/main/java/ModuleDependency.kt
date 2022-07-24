@@ -5,9 +5,10 @@ import kotlin.reflect.full.memberProperties
 @Suppress("unused")
 object ModuleDependency {
     // All consts are accessed via reflection
-    const val APP = ":app"
-    const val FEATURE_ALBUM = ":feature_movie"
-    const val TEST_UTIL_LIBRARY = ":test_util_library"
+    const val APP = ":presentation"
+    const val DATA = ":data"
+    const val DOMAIN = ":domain"
+    const val LIBRARY_TEST_UTILS = ":library_test_utils"
 
     // False positive" function can be private"
     // See: https://youtrack.jetbrains.com/issue/KT-33610

@@ -30,7 +30,7 @@ pluginManagement {
 
         val kotlinVersion: String by settings
         id("org.jetbrains.kotlin.jvm") version kotlinVersion
-        id("org.jetbrains.kotlin.android") version kotlinVersion
+        id("org.jetbrains.kotlin.android") version "1.7.10"
 
         val navigationVersion: String by settings
         id("androidx.navigation.safeargs.kotlin") version navigationVersion
@@ -208,6 +208,9 @@ dependencyResolutionManagement {
             alias("mockk").to("io.mockk:mockk:1.+")
             alias("arch").to("androidx.arch.core:core-testing:2.+")
 
+            version("mockwebserver","4.+")
+            alias("mockwebserver").to("com.squareup.okhttp3", "mockwebserver").versionRef("mockwebserver")
+
             version("junit", "5.+")
             alias("junit-jupiter-api").to("org.junit.jupiter", "junit-jupiter-api")
                 .versionRef("junit")
@@ -230,3 +233,4 @@ dependencyResolutionManagement {
         }
     }
 }
+include(":library_test_utils")

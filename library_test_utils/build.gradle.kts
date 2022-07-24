@@ -1,7 +1,7 @@
 plugins {
     id(GradlePluginId.ANDROID_LIBRARY)
     id(GradlePluginId.KOTLIN_ANDROID)
-    id(GradlePluginId.KOTLIN_KAPT)
+    id(GradlePluginId.ANDROID_JUNIT_5)
 }
 
 android {
@@ -34,28 +34,11 @@ android {
 }
 
 dependencies {
+    // implementation configuration is used here (instead of testImplementation) because this module is added as
+    // testImplementation dependency inside other modules. Using implementation allows to write tests for test
+    // utilities.
     implementation(libs.bundles.kotlin)
-    implementation(libs.corektx)
+    implementation(libs.bundles.test)
 
-    // module
-    implementation(project(ModuleDependency.DOMAIN))
-
-    implementation(libs.appcompat)
-
-    implementation(libs.bundles.retrofit)
-    implementation(libs.bundles.okhttp)
-    implementation(libs.okhttpprofiler)
-    implementation(libs.gson)
-
-    implementation(libs.bundles.room)
-    kapt(libs.room.compiler)
-
-    implementation(libs.hiltandroid)
-    kapt(libs.hiltcompiler)
-
-    implementation(libs.timber)
-
-    testImplementation(project(ModuleDependency.LIBRARY_TEST_UTILS))
-    testImplementation(libs.bundles.test)
-    testImplementation(libs.mockwebserver)
+    runtimeOnly(libs.junit.jupiter.engine)
 }

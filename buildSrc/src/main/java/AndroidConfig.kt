@@ -11,11 +11,6 @@ object AndroidConfig {
     const val TEST_INSTRUMENTATION_RUNNER = "androidx.test.runner.AndroidJUnitRunner"
 }
 
-object Modules {
-    const val domain = ":domain"
-    const val data = ":data"
-}
-
 interface BuildType {
 
     companion object {

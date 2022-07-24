@@ -82,10 +82,10 @@ dependencies {
     kapt(libs.glidecompiler)
 
     // module
-    implementation(project(Modules.domain)) {
+    implementation(project(ModuleDependency.DOMAIN)) {
         exclude(group = "com.inhouse.cleannytimesapp", module = "domain")
     }
-    implementation(project(Modules.data)) {
+    implementation(project(ModuleDependency.DATA)) {
         exclude(group = "com.inhouse.cleannytimesapp", module = "data")
     }
 
