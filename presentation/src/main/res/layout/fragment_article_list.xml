@@ -9,43 +9,51 @@
             type="com.inhouse.cleannytimesapp.ui.main.ArticleListViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:onRefreshListener="@{()->articleListViewModel.loadData()}"
+        app:refreshing="@{articleListViewModel.viewStateFlow}">
 
-        <LinearLayout
-            android:id="@+id/ll_network_error"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:visibility="@{articleListViewModel.networkErrorState}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            <TextView
+            <LinearLayout
+                android:id="@+id/ll_network_error"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/network_error_occurred" />
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="@{articleListViewModel.networkErrorState}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <!--            <Button-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:onClick="@{()->articleViewModel.refreshForInitialDataFetch()}"-->
-            <!--                android:text="@string/retry" />-->
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/network_error_occurred" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_article_list"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:visibility="@{!articleListViewModel.networkErrorState}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:refreshData="@{articleListViewModel.articleList}" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <!--            <Button-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:onClick="@{()->articleViewModel.refreshForInitialDataFetch()}"-->
+                <!--                android:text="@string/retry" />-->
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_article_list"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="@{!articleListViewModel.networkErrorState}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:refreshDataWithState="@{articleListViewModel.viewStateFlow}" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
 </layout>

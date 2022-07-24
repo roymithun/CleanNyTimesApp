@@ -1,4 +1,4 @@
-package com.inhouse.cleannytimesapp.base
+package com.inhouse.cleannytimesapp.base.model
 
 import com.inhouse.cleannytimesapp.domain.model.Model
 

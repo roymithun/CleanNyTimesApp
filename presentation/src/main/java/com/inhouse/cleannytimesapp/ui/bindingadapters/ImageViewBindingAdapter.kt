@@ -22,7 +22,7 @@ fun ImageView.loadThumbnailFromMediaList(mediaList: List<MediaItem>, placeholder
             .transform(CircleCrop())
             .into(this)
     } catch (e: Exception) {
-        Timber.d("exception== ${e.localizedMessage} mediaList=$mediaList")
+        Timber.e("exception== ${e.localizedMessage}")
     }
 }
 

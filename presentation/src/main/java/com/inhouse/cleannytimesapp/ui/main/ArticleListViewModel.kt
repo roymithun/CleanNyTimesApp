@@ -2,9 +2,11 @@ package com.inhouse.cleannytimesapp.ui.main
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.inhouse.cleannytimesapp.BuildConfig
+import com.inhouse.cleannytimesapp.base.viewmodel.BaseAction
+import com.inhouse.cleannytimesapp.base.viewmodel.BaseViewModel
+import com.inhouse.cleannytimesapp.base.viewmodel.BaseViewState
 import com.inhouse.cleannytimesapp.domain.Result
 import com.inhouse.cleannytimesapp.domain.usecase.articles.GetMostPopularArticlesUseCase
 import com.inhouse.cleannytimesapp.model.ArticleItem
@@ -12,6 +14,7 @@ import com.inhouse.cleannytimesapp.model.ArticleItemMapper
 import com.inhouse.cleannytimesapp.navigation.NavManager
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import javax.inject.Inject
 
 @HiltViewModel
@@ -20,7 +23,7 @@ class ArticleListViewModel @Inject constructor(
     private val articleItemMapper: ArticleItemMapper,
     private val navManager: NavManager
 ) :
-    ViewModel() {
+    BaseViewModel<ArticleListViewModel.ViewState, ArticleListViewModel.Action>(ViewState()) {
     private val _networkErrorState = MutableLiveData<Boolean?>()
     val networkErrorState: LiveData<Boolean?> = _networkErrorState
 
@@ -31,6 +34,12 @@ class ArticleListViewModel @Inject constructor(
         getArticleList()
     }
 
+    override fun onLoadData() {
+        // reset state
+        sendAction(Action.ArticleListLoadingIdle)
+        getArticleList()
+    }
+
     private fun getArticleList() {
         viewModelScope.launch {
             mostPopularArticlesUseCase.invoke(
@@ -38,18 +47,24 @@ class ArticleListViewModel @Inject constructor(
                     7,
                     BuildConfig.API_KEY
                 )
-            ).let {
-                _networkErrorState.postValue(
-                    when (it) {
-                        is Result.Error -> true
-                        else -> {
-                            _articleList.value = (it as Result.Success).data.map { article ->
-                                articleItemMapper.mapToPresentation(article)
-                            }
-                            false
+            ).let { result ->
+                val action = when (result) {
+                    is Result.Success -> {
+                        Timber.d("result.data = ${result.data}")
+                        val articles: List<ArticleItem> =
+                            result.data.map { articleItemMapper.mapToPresentation(it) }
+
+                        if (result.data.isEmpty()) {
+                            Action.ArticleListLoadingFailure
+                        } else {
+                            Action.ArticleListLoadingSuccess(articles)
                         }
                     }
-                )
+                    else -> {
+                        Action.ArticleListLoadingFailure
+                    }
+                }
+                sendAction(action)
             }
         }
     }
@@ -61,5 +76,35 @@ class ArticleListViewModel @Inject constructor(
     fun navigateToArticleDetail(article: ArticleItem) {
         val navDirections = ArticleListFragmentDirections.actionListToDetailFragment(article)
         navManager.navigate(navDirections)
+    }
+
+    data class ViewState(
+        val isLoading: Boolean = true,
+        val isError: Boolean = false,
+        val articles: List<ArticleItem> = listOf()
+    ) : BaseViewState
+
+    sealed interface Action : BaseAction {
+        class ArticleListLoadingSuccess(val articles: List<ArticleItem>) : Action
+        object ArticleListLoadingFailure : Action
+        object ArticleListLoadingIdle : Action
+    }
+
+    override fun onReduceState(viewAction: Action) = when (viewAction) {
+        is Action.ArticleListLoadingSuccess -> state.copy(
+            isLoading = false,
+            isError = false,
+            articles = viewAction.articles
+        )
+        is Action.ArticleListLoadingFailure -> state.copy(
+            isLoading = false,
+            isError = true,
+            articles = listOf()
+        )
+        else -> state.copy(
+            isLoading = true,
+            isError = false,
+            articles = listOf()
+        )
     }
 }

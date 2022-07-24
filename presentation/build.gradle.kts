@@ -73,6 +73,7 @@ dependencies {
     implementation(libs.appcompat)
     implementation(libs.recyclerview)
     implementation(libs.material)
+    implementation(libs.swiperefreshlayout)
 
     implementation(libs.hiltandroid)
     kapt(libs.hiltcompiler)
