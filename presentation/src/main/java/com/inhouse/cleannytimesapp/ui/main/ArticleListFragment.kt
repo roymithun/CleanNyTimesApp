@@ -7,13 +7,19 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.inhouse.cleannytimesapp.R
+import com.inhouse.cleannytimesapp.base.extension.textChanges
 import com.inhouse.cleannytimesapp.databinding.FragmentArticleListBinding
 import com.inhouse.cleannytimesapp.model.ArticleItem
 import com.inhouse.cleannytimesapp.ui.main.adapter.ArticleListAdapter
+import com.inhouse.cleannytimesapp.util.Constants
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.flow.debounce
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 
 
 @AndroidEntryPoint
@@ -46,28 +52,15 @@ class ArticleListFragment : Fragment() {
             // configure recycler view
             articleListAdapter = ArticleListAdapter(object : ArticleListAdapter.OnClickListener {
                 override fun onClick(article: ArticleItem) {
-//                    viewModel.showArticleDetail(article)
                     viewModel.navigateToArticleDetail(article)
                 }
             })
             rvArticleList.layoutManager = LinearLayoutManager(requireContext())
             rvArticleList.adapter = articleListAdapter
         }
-
-        // register observers
-        /*viewModel.navigateToArticleDetail.observe(viewLifecycleOwner) {
-            it?.let {
-                findNavController().navigate(
-                    ArticleListFragmentDirections.actionListToDetailFragment(
-                        it
-                    )
-                ).also {
-                    viewModel.doneNavigationToDetail()
-                }
-            }
-        }*/
     }
 
+    @OptIn(FlowPreview::class)
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         menu.clear()
@@ -78,21 +71,11 @@ class ArticleListFragment : Fragment() {
             actionView = searchView
         }
 
-        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String): Boolean {
-                return false
+        searchView.textChanges().debounce(Constants.DEBOUNCE_TIMEOUT)
+            .onEach {
+                viewModel.searchArticles("%$it%")
             }
-
-            override fun onQueryTextChange(newText: String): Boolean {
-                var searchText = newText
-                searchText = "%$searchText%"
-//                articleListViewModel.articleList(searchText)
-//                    .observe(viewLifecycleOwner) {
-//                        it?.let { articleListAdapter.submitList(it) }
-//                    }
-                return false
-            }
-        })
+            .launchIn(viewLifecycleOwner.lifecycleScope)
     }
 
     override fun onStop() {

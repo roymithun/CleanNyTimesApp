@@ -23,9 +23,7 @@ class MostPopularArticlesRepository @Inject constructor(
             )?.results ?: emptyList()
 
             articleEntityList.let {
-//                Timber.d("gibow articleDao: $articleDao")
-                val insertArticleList: List<Long> = articleDao.insertArticleList(it)
-                Timber.d("gibow insertArticleList = $insertArticleList")
+                articleDao.insertArticleList(it)
             }
             articleEntityList.map {
                 articleEntityMapper.mapToDomain(it)
@@ -35,6 +33,12 @@ class MostPopularArticlesRepository @Inject constructor(
         } catch (e: Exception) {
             Timber.e("exception: ${e.message}")
             emptyList()
+        }
+    }
+
+    override suspend fun searchArticles(query: String): List<Article> {
+        return articleDao.getAllArticles(query).map {
+            articleEntityMapper.mapToDomain(it)
         }
     }
 }

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">CleanNyTimesApp</string>
-    <string name="network_error_occurred">Network error occurred</string>
+    <string name="network_error_occurred">Network Error Occurred</string>
+    <string name="no_result_found">No Result Found</string>
     <string name="retry">Retry</string>
     <string name="search_article">Search Article</string>
     <string name="updated_date">Updated: %s</string>

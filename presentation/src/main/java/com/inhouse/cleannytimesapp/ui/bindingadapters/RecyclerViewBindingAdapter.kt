@@ -27,5 +27,5 @@ fun RecyclerView.refreshDataWithState(state: ArticleListViewModel.ViewState) {
 
 @BindingAdapter("android:visibility")
 fun RecyclerView.setVisibility(state: ArticleListViewModel.ViewState) {
-    visibility = if (state.isError) View.GONE else View.VISIBLE
+    visibility = if (state.isError || state.articles.isEmpty()) View.GONE else View.VISIBLE
 }
