@@ -1,6 +1,6 @@
 package com.inhouse.cleannytimesapp.data.repository
 
-import com.inhouse.cleannytimesapp.data.local.ArticleDao
+import com.inhouse.cleannytimesapp.data.local.db.ArticleDao
 import com.inhouse.cleannytimesapp.data.model.ArticleEntity
 import com.inhouse.cleannytimesapp.data.model.ArticleEntityMapper
 import com.inhouse.cleannytimesapp.data.remote.api.ArticleListApi

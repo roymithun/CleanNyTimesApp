@@ -6,7 +6,7 @@ import androidx.room.TypeConverters
 import com.google.gson.annotations.SerializedName
 import com.inhouse.cleannytimesapp.data.base.EntityMapper
 import com.inhouse.cleannytimesapp.data.base.ModelEntity
-import com.inhouse.cleannytimesapp.data.local.RoomTypeConverters
+import com.inhouse.cleannytimesapp.data.local.db.RoomTypeConverters
 import com.inhouse.cleannytimesapp.domain.model.Article
 import javax.inject.Inject
 

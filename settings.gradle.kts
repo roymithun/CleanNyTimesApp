@@ -215,6 +215,9 @@ dependencyResolutionManagement {
             alias("junit-jupiter-api").to("org.junit.jupiter", "junit-jupiter-api")
                 .versionRef("junit")
 
+            version("roboelectric", "4.+")
+            alias("robolectric").to("org.robolectric", "robolectric").versionRef("roboelectric"
+            )
             bundle(
                 "test",
                 listOf(
@@ -224,9 +227,13 @@ dependencyResolutionManagement {
                     "espresso",
                     "mockk",
                     "arch",
-                    "junit-jupiter-api"
+                    "junit-jupiter-api",
+                    "robolectric"
                 )
             )
+
+            version("hilt-android-testing", "2.38.1")
+            alias("hilt.android.testing").to("com.google.dagger","hilt-android-testing").versionRef("hilt-android-testing")
 
             alias("junit-jupiter-engine").to("org.junit.jupiter", "junit-jupiter-engine")
                 .versionRef("junit")

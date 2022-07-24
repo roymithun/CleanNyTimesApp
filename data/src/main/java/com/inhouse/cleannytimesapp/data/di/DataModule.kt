@@ -5,9 +5,9 @@ import androidx.room.Room
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.inhouse.cleannytimesapp.data.Constants.DATABASE_NAME
-import com.inhouse.cleannytimesapp.data.local.ArticleDao
-import com.inhouse.cleannytimesapp.data.local.ArticleDatabase
-import com.inhouse.cleannytimesapp.data.local.RoomTypeConverters
+import com.inhouse.cleannytimesapp.data.local.db.ArticleDao
+import com.inhouse.cleannytimesapp.data.local.db.ArticleDatabase
+import com.inhouse.cleannytimesapp.data.local.db.RoomTypeConverters
 import com.inhouse.cleannytimesapp.data.repository.MostPopularArticlesRepository
 import com.inhouse.cleannytimesapp.domain.repository.ArticlesRepository
 import dagger.Module

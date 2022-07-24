@@ -1,4 +1,4 @@
-package com.inhouse.cleannytimesapp.data.local
+package com.inhouse.cleannytimesapp.data.local.db
 
 import androidx.room.ProvidedTypeConverter
 import androidx.room.TypeConverter

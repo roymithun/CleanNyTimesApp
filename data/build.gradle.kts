@@ -55,7 +55,13 @@ dependencies {
 
     implementation(libs.timber)
 
+    // Unit Tests
     testImplementation(project(ModuleDependency.LIBRARY_TEST_UTILS))
     testImplementation(libs.bundles.test)
     testImplementation(libs.mockwebserver)
+
+    // Instrumented Unit Tests
+    androidTestImplementation(libs.bundles.test)
+    androidTestImplementation(libs.hilt.android.testing)
+    kaptAndroidTest(libs.hiltcompiler)
 }

@@ -1,4 +1,4 @@
-package com.inhouse.cleannytimesapp.data.local
+package com.inhouse.cleannytimesapp.data.local.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase

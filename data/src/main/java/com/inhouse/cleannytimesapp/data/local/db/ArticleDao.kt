@@ -1,4 +1,4 @@
-package com.inhouse.cleannytimesapp.data.local
+package com.inhouse.cleannytimesapp.data.local.db
 
 import androidx.room.Dao
 import androidx.room.Insert
@@ -15,5 +15,8 @@ interface ArticleDao {
     suspend fun insertArticle(article: ArticleEntity): Long
 
     @Query("SELECT * FROM article WHERE article.title LIKE :filter")
-    fun getAllArticles(filter: String = "%%"): List<ArticleEntity>
+    suspend fun getAllArticles(filter: String = "%%"): List<ArticleEntity>
+
+    @Query("SELECT * FROM article WHERE article.id = :id")
+    suspend fun getArticle(id: Long): ArticleEntity?
 }
