@@ -25,3 +25,12 @@ fun ImageView.loadThumbnailFromMediaList(mediaList: List<MediaItem>, placeholder
         Timber.d("exception== ${e.localizedMessage} mediaList=$mediaList")
     }
 }
+
+@BindingAdapter("articlePhoto", "placeholder")
+fun ImageView.loadArticleDetailPhoto(url: String, placeholder: Drawable) {
+    Glide.with(context)
+        .load(url)
+        .error(R.drawable.ic_broken_image)
+        .placeholder(placeholder)
+        .into(this)
+}

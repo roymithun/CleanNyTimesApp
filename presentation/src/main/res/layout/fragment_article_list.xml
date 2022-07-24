@@ -41,11 +41,11 @@
             android:id="@+id/rv_article_list"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:refreshData="@{articleListViewModel.articleList}"
             android:visibility="@{!articleListViewModel.networkErrorState}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:refreshData="@{articleListViewModel.articleList}" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

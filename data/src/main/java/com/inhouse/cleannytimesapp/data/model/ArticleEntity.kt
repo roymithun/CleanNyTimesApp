@@ -22,6 +22,7 @@ data class ArticleEntity(
     @SerializedName("subsection") val subSection: String,
     @SerializedName("byline") val byLine: String,
     val title: String,
+    @SerializedName("abstract") val abstractContent: String,
     @TypeConverters(RoomTypeConverters::class)
     @SerializedName("des_facet") val desFacetList: List<String>,
     @TypeConverters(RoomTypeConverters::class)
@@ -41,6 +42,7 @@ class ArticleEntityMapper @Inject constructor(
         subSection = entity.subSection,
         byLine = entity.byLine,
         title = entity.title,
+        abstractContent = entity.abstractContent,
         desFacetList = entity.desFacetList,
         mediaList = entity.mediaList.map { mediaEntityMapper.mapToDomain(it) }
     )
@@ -55,6 +57,7 @@ class ArticleEntityMapper @Inject constructor(
         subSection = model.subSection,
         byLine = model.byLine,
         title = model.title,
+        abstractContent = model.abstractContent,
         desFacetList = model.desFacetList,
         mediaList = model.mediaList.map { mediaEntityMapper.mapToEntity(it) }
     )

@@ -18,6 +18,7 @@ data class ArticleItem(
     val subSection: String,
     val byLine: String,
     val title: String,
+    val abstractContent: String,
     val desFacetList: List<String>,
     val mediaList: List<MediaItem>
 ) : ModelItem(), Parcelable
@@ -36,6 +37,7 @@ class ArticleItemMapper @Inject constructor(
         subSection = model.subSection,
         byLine = model.byLine,
         title = model.title,
+        abstractContent = model.abstractContent,
         desFacetList = model.desFacetList,
         mediaList = model.mediaList.map { mediaItemMapper.mapToPresentation(it) }
     )
@@ -50,6 +52,7 @@ class ArticleItemMapper @Inject constructor(
         subSection = modelItem.subSection,
         byLine = modelItem.byLine,
         title = modelItem.title,
+        abstractContent = modelItem.abstractContent,
         desFacetList = modelItem.desFacetList,
         mediaList = modelItem.mediaList.map { mediaItemMapper.mapToDomain(it) }
     )

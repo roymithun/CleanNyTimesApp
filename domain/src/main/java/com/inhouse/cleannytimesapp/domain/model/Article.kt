@@ -10,6 +10,7 @@ data class Article(
     val subSection: String,
     val byLine: String,
     val title: String,
+    val abstractContent: String,
     val desFacetList: List<String>,
     val mediaList: List<Media>
 ) : Model()
