@@ -46,7 +46,8 @@ class ArticleListFragment : Fragment() {
             // configure recycler view
             articleListAdapter = ArticleListAdapter(object : ArticleListAdapter.OnClickListener {
                 override fun onClick(article: ArticleItem) {
-                    viewModel.showArticleDetail(article)
+//                    viewModel.showArticleDetail(article)
+                    viewModel.navigateToArticleDetail(article)
                 }
             })
             rvArticleList.layoutManager = LinearLayoutManager(requireContext())
@@ -54,7 +55,7 @@ class ArticleListFragment : Fragment() {
         }
 
         // register observers
-        viewModel.navigateToArticleDetail.observe(viewLifecycleOwner) {
+        /*viewModel.navigateToArticleDetail.observe(viewLifecycleOwner) {
             it?.let {
                 findNavController().navigate(
                     ArticleListFragmentDirections.actionListToDetailFragment(
@@ -64,7 +65,7 @@ class ArticleListFragment : Fragment() {
                     viewModel.doneNavigationToDetail()
                 }
             }
-        }
+        }*/
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
