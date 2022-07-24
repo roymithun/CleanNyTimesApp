@@ -1,7 +1,5 @@
 package com.inhouse.cleannytimesapp.ui.main
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.inhouse.cleannytimesapp.BuildConfig
 import com.inhouse.cleannytimesapp.base.viewmodel.BaseAction
@@ -24,14 +22,9 @@ class ArticleListViewModel @Inject constructor(
     private val navManager: NavManager
 ) :
     BaseViewModel<ArticleListViewModel.ViewState, ArticleListViewModel.Action>(ViewState()) {
-    private val _networkErrorState = MutableLiveData<Boolean?>()
-    val networkErrorState: LiveData<Boolean?> = _networkErrorState
-
-    private val _articleList = MutableLiveData<List<ArticleItem>?>()
-    val articleList: LiveData<List<ArticleItem>?> = _articleList
 
     init {
-        getArticleList()
+        onLoadData()
     }
 
     override fun onLoadData() {
@@ -67,10 +60,6 @@ class ArticleListViewModel @Inject constructor(
                 sendAction(action)
             }
         }
-    }
-
-    fun refreshForInitialDataFetch() {
-        getArticleList()
     }
 
     fun navigateToArticleDetail(article: ArticleItem) {

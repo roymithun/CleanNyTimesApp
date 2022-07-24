@@ -1,5 +1,6 @@
 package com.inhouse.cleannytimesapp.ui.bindingadapters
 
+import android.view.View
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.inhouse.cleannytimesapp.model.ArticleItem
@@ -22,4 +23,9 @@ fun RecyclerView.refreshDataWithState(state: ArticleListViewModel.ViewState) {
             (adapter as ArticleListAdapter).submitList(it)
         }
     }
+}
+
+@BindingAdapter("android:visibility")
+fun RecyclerView.setVisibility(state: ArticleListViewModel.ViewState) {
+    visibility = if (state.isError) View.GONE else View.VISIBLE
 }

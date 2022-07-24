@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:visibility="@{articleListViewModel.networkErrorState}"
+                android:visibility="@{articleListViewModel.viewStateFlow}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -36,18 +36,18 @@
                     android:layout_height="wrap_content"
                     android:text="@string/network_error_occurred" />
 
-                <!--            <Button-->
-                <!--                android:layout_width="wrap_content"-->
-                <!--                android:layout_height="wrap_content"-->
-                <!--                android:onClick="@{()->articleViewModel.refreshForInitialDataFetch()}"-->
-                <!--                android:text="@string/retry" />-->
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{()->articleListViewModel.loadData()}"
+                    android:text="@string/retry" />
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_article_list"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:visibility="@{!articleListViewModel.networkErrorState}"
+                android:visibility="@{articleListViewModel.viewStateFlow}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
