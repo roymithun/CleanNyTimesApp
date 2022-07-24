@@ -45,7 +45,9 @@ dependencies {
     implementation(libs.bundles.retrofit)
     implementation(libs.bundles.okhttp)
     implementation(libs.okhttpprofiler)
+    implementation(libs.gson)
 
+    implementation(libs.bundles.room)
     kapt(libs.room.compiler)
 
     implementation(libs.hiltandroid)

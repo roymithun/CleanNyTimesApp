@@ -40,7 +40,7 @@ class ArticleListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.apply {
-            lifecycleOwner = this@ArticleListFragment
+            lifecycleOwner = this@ArticleListFragment.viewLifecycleOwner
             articleListViewModel = viewModel
 
             // configure recycler view

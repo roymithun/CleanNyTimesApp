@@ -10,5 +10,5 @@ interface ArticleListApi {
     suspend fun getArticleList(
         @Path("period") period: Int = 7, // weekly
         @Query("api-key") apiKey: String
-    ): ArticleListEntity
+    ): ArticleListEntity?
 }

@@ -91,12 +91,13 @@ dependencyResolutionManagement {
             alias("retrofit-core").to("com.squareup.retrofit2", "retrofit").versionRef("retrofit")
             alias("converter-moshi").to("com.squareup.retrofit2", "converter-moshi")
                 .versionRef("retrofit")
+            alias("converter-gson").to("com.squareup.retrofit2", "converter-gson").versionRef("retrofit")
 
-            version("gson-version", "2.9.0")
+            version("gson-version", "2.+")
             alias("gson").to("com.google.code.gson", "gson").versionRef("gson-version")
 
             // KotlinJsonAdapterFactory unresolved reference -- https://stackoverflow.com/a/70036501/2694480
-            version("moshi-kotlin", "1.12.0")
+            version("moshi-kotlin", "1.+")
             alias("moshi-kotlin").to("com.squareup.moshi", "moshi-kotlin")
                 .versionRef("moshi-kotlin")
             bundle(
@@ -104,6 +105,7 @@ dependencyResolutionManagement {
                 listOf(
                     "retrofit-core",
                     "converter-moshi",
+                    "converter-gson",
                     "moshi-kotlin",
                 )
             )

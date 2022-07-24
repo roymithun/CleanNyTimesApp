@@ -2,15 +2,13 @@ package com.inhouse.cleannytimesapp.data.di
 
 import com.inhouse.cleannytimesapp.data.HttpClient
 import com.inhouse.cleannytimesapp.data.remote.api.ArticleListApi
-import com.squareup.moshi.Moshi
-import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
-import retrofit2.converter.moshi.MoshiConverterFactory
+import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
@@ -19,18 +17,13 @@ import javax.inject.Singleton
 object NetworkModule {
     @Singleton
     @Provides
-    fun moshi(): Moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
-
-    @Singleton
-    @Provides
     fun retrofit(
-        moshi: Moshi,
         okHttpClient: OkHttpClient
     ): Retrofit =
         Retrofit.Builder()
             .baseUrl(HttpClient.BASE_URL)
             .client(okHttpClient)
-            .addConverterFactory(MoshiConverterFactory.create(moshi))
+            .addConverterFactory(GsonConverterFactory.create())
             .build()
 
     @Singleton

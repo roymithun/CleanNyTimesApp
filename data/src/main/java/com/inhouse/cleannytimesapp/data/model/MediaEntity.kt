@@ -1,20 +1,22 @@
 package com.inhouse.cleannytimesapp.data.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import com.google.gson.annotations.SerializedName
 import com.inhouse.cleannytimesapp.data.base.EntityMapper
 import com.inhouse.cleannytimesapp.data.base.ModelEntity
 import com.inhouse.cleannytimesapp.domain.model.Media
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 import javax.inject.Inject
 
-@JsonClass(generateAdapter = true)
+@Entity(tableName = "media")
 data class MediaEntity(
+    @PrimaryKey(autoGenerate = true)
     val id: Int? = null,
     val type: String,
-    @Json(name = "subtype") val subType: String,
+    @SerializedName("subtype") val subType: String,
     val caption: String,
     val copyright: String,
-    @Json(name = "media-metadata") val mediaMetadataList: List<MediaMetadataEntity>
+    @SerializedName("media-metadata") val mediaMetadataList: List<MediaMetadataEntity>
 ) : ModelEntity()
 
 class MediaEntityMapper @Inject constructor(

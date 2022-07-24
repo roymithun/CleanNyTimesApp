@@ -1,16 +1,14 @@
 package com.inhouse.cleannytimesapp.data.model
 
+import com.google.gson.annotations.SerializedName
 import com.inhouse.cleannytimesapp.data.base.EntityMapper
 import com.inhouse.cleannytimesapp.data.base.ModelEntity
 import com.inhouse.cleannytimesapp.domain.model.ArticleList
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 import javax.inject.Inject
 
-@JsonClass(generateAdapter = true)
 data class ArticleListEntity(
     val status: String,
-    @Json(name = "num_results") val numResults: Int,
+    @SerializedName("num_results") val numResults: Int,
     val results: List<ArticleEntity>
 ) : ModelEntity()
 

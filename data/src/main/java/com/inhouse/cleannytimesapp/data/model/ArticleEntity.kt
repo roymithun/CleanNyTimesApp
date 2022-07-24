@@ -1,25 +1,31 @@
 package com.inhouse.cleannytimesapp.data.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import androidx.room.TypeConverters
+import com.google.gson.annotations.SerializedName
 import com.inhouse.cleannytimesapp.data.base.EntityMapper
 import com.inhouse.cleannytimesapp.data.base.ModelEntity
+import com.inhouse.cleannytimesapp.data.local.RoomTypeConverters
 import com.inhouse.cleannytimesapp.domain.model.Article
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 import javax.inject.Inject
 
-@JsonClass(generateAdapter = true)
+@Entity(tableName = "article")
 data class ArticleEntity(
+    @PrimaryKey
     val id: Long,
     val url: String,
     val source: String,
-    @Json(name = "published_date") val publishedDate: String,
-    @Json(name = "updated") val updatedDate: String,
+    @SerializedName("published_date") val publishedDate: String,
+    @SerializedName("updated") val updatedDate: String,
     val section: String,
-    @Json(name = "subsection") val subSection: String,
-    @Json(name = "byline") val byLine: String,
+    @SerializedName("subsection") val subSection: String,
+    @SerializedName("byline") val byLine: String,
     val title: String,
-    @Json(name = "des_facet") val desFacetList: List<String>,
-    @Json(name = "media") val mediaList: List<MediaEntity>
+    @TypeConverters(RoomTypeConverters::class)
+    @SerializedName("des_facet") val desFacetList: List<String>,
+    @TypeConverters(RoomTypeConverters::class)
+    @SerializedName("media") val mediaList: List<MediaEntity>
 ) : ModelEntity()
 
 class ArticleEntityMapper @Inject constructor(
