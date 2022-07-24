@@ -14,7 +14,7 @@ import org.robolectric.annotation.Config
 class ArticleDaoTest : DbTest() {
     @Test
     fun testInsertAndGet() {
-        val articleEntityList = FakeArticlesData.articles
+        val articleEntityList = FakeArticlesData.articleEntities
         runBlocking {
             val idListInsert = db.articleDao().insertArticleList(articleEntityList)
             val allArticles = db.articleDao().getAllArticles()
@@ -25,7 +25,7 @@ class ArticleDaoTest : DbTest() {
 
     @Test
     fun findNotExists() {
-        val articleEntityList = FakeArticlesData.articles
+        val articleEntityList = FakeArticlesData.articleEntities
         val articleId = ArgumentMatchers.anyLong()
         runBlocking {
             db.articleDao().insertArticleList(articleEntityList)
