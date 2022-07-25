@@ -176,7 +176,7 @@ dependencyResolutionManagement {
             alias("room.compiler").to("androidx.room", "room-compiler").versionRef("room")
 
             // Test dependencies
-            alias("test-coroutines").to("org.jetbrains.kotlinx", "kotlinx-coroutines-test")
+            alias("test.coroutines").to("org.jetbrains.kotlinx", "kotlinx-coroutines-test")
                 .versionRef("coroutines")
 
             version("glide-version", "4.+")
@@ -224,8 +224,9 @@ dependencyResolutionManagement {
             )
             bundle(
                 "test",
+
                 listOf(
-                    "test-coroutines",
+                    "test.coroutines",
                     "kluent-android",
                     "test-runner",
                     "espresso",
@@ -243,16 +244,27 @@ dependencyResolutionManagement {
 
             bundle(
                 "test.non.android", listOf(
-                    "test-coroutines",
+                    "test.coroutines",
                     "truth",
                     "mockk",
                     "junit4",
                 )
             )
 
-            version("hilt-android-testing", "2.38.1")
+            version("hilt-android-testing", agpHiltVersion)
             alias("hilt.android.testing").to("com.google.dagger", "hilt-android-testing")
                 .versionRef("hilt-android-testing")
+
+            version("espresso-contrib", "3.+")
+            alias("espresso.contrib").to("androidx.test.espresso", "espresso-contrib")
+                .versionRef("espresso-contrib")
+
+            version("navigation-testing", "2.3.5")
+            alias("navigation.testing").to("androidx.navigation", "navigation-testing")
+                .versionRef("navigation-testing")
+
+            version("androidx.test.ext","1.+")
+            alias("test.ext").to("androidx.test.ext","junit").versionRef("androidx.test.ext")
 
             alias("junit-jupiter-engine").to("org.junit.jupiter", "junit-jupiter-engine")
                 .versionRef("junit")

@@ -52,7 +52,14 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
-
+    packagingOptions {
+        resources.excludes.addAll(
+            listOf(
+                "META-INF/LICENSE.md",
+                "META-INF/LICENSE-notice.md"
+            )
+        )
+    }
     buildFeatures {
         viewBinding = true
         dataBinding = true
@@ -94,6 +101,19 @@ dependencies {
     testImplementation(project(ModuleDependency.LIBRARY_TEST_UTILS))
     testImplementation(libs.bundles.test)
     testRuntimeOnly(libs.junit.jupiter.engine)
-}
 
+    // Instrumented Unit Tests
+    androidTestImplementation(libs.arch)
+    androidTestImplementation(libs.truth)
+    androidTestImplementation(libs.test.coroutines)
+    androidTestImplementation(libs.test.ext)
+    androidTestImplementation(libs.espresso)
+    androidTestImplementation(libs.hilt.android.testing)
+    kaptAndroidTest(libs.hiltcompiler)
+    androidTestAnnotationProcessor(libs.hiltcompiler)
+    androidTestImplementation(libs.navigation.testing)
+    androidTestImplementation(libs.espresso.contrib) {
+        exclude("org.checkerframework")
+    }
+}
 fun String.toSnakeCase() = this.split(Regex("(?=[A-Z])")).joinToString("_") { it.toLowerCase() }

@@ -8,7 +8,7 @@ object AndroidConfig {
     const val VERSION_NAME = "1.0"
 
     const val ID = "com.inhouse.cleannytimesapp"
-    const val TEST_INSTRUMENTATION_RUNNER = "androidx.test.runner.AndroidJUnitRunner"
+    const val TEST_INSTRUMENTATION_RUNNER = "com.inhouse.cleannytimesapp.util.HiltTestRunner"
 }
 
 interface BuildType {
