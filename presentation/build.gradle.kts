@@ -9,6 +9,10 @@ plugins {
     id(GradlePluginId.SAFE_ARGS)
 }
 
+apply {
+    from("jacoco.gradle")
+}
+
 android {
     compileSdk = AndroidConfig.COMPILE_SDK_VERSION
     defaultConfig {

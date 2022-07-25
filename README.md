@@ -125,6 +125,19 @@ There are a few ways to open this project.
 1. Run `git clone https://github.com/roymithun/CleanNyTimesApp.git` command to clone project
 2. Open `Android Studio` and select `File | Open...` from the menu. Select cloned directory and press `Open` button
 
+### Code Coverage for Unit Tests
+
+Code coverage of java and kotlin files can measured using Jacoco scripts. Currently, [:presentation](/presentation) and [:data](/data) modules have jacoco gradle configured. To run code coverage, following command can be run on terminal
+
+```
+ ./gradlew fullCoverageReport
+```
+
+The generated report can be found at
+
+```
+<your system name>/<your project location>/app/build/coverage-report/index.html
+```
 ## How to consume NyTimes API?
 Most Popular API from [nytimes developer](https://developer.nytimes.com/apis) have been used.
 
