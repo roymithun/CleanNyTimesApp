@@ -1,4 +1,4 @@
-package com.inhouse.cleannytimsapp.library.test.utils
+package com.inhouse.cleannytimesapp.library.test.utils
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

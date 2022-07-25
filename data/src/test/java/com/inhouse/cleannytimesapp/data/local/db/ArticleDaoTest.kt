@@ -1,6 +1,6 @@
 package com.inhouse.cleannytimesapp.data.local.db
 
-import com.inhouse.cleannytimesapp.data.utils.FakeArticlesData
+import com.inhouse.cleannytimesapp.data.util.FakeArticlesData
 import kotlinx.coroutines.runBlocking
 import org.amshove.kluent.shouldBeEqualTo
 import org.junit.Test

@@ -1,4 +1,4 @@
-package com.inhouse.cleannytimsapp.library
+package com.inhouse.cleannytimesapp.library
 
 import org.junit.Test
 

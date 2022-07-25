@@ -13,4 +13,8 @@ dependencies {
     implementation(libs.coroutines)
 
     implementation(libs.daggersupport)
+
+    // Unit Tests
+    testImplementation(libs.bundles.test.non.android)
+    testRuntimeOnly(libs.junit.jupiter.engine)
 }

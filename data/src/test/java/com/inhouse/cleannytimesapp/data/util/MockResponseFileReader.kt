@@ -1,4 +1,4 @@
-package com.inhouse.cleannytimesapp.data.utils
+package com.inhouse.cleannytimesapp.data.util
 
 import java.io.InputStreamReader
 

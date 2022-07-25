@@ -2,9 +2,9 @@ package com.inhouse.cleannytimesapp.data.remote.api
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.inhouse.cleannytimesapp.data.model.ArticleListEntity
-import com.inhouse.cleannytimesapp.data.utils.MockResponseFileReader
-import com.inhouse.cleannytimesapp.data.utils.SUCCESS_RESPONSE_FILENAME
-import com.inhouse.cleannytimsapp.library.test.utils.MainCoroutineRule
+import com.inhouse.cleannytimesapp.data.util.MockResponseFileReader
+import com.inhouse.cleannytimesapp.data.util.SUCCESS_RESPONSE_FILENAME
+import com.inhouse.cleannytimesapp.library.test.utils.MainCoroutineRule
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
 import okhttp3.mockwebserver.MockResponse

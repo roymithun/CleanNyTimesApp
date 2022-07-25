@@ -1,4 +1,4 @@
-package com.inhouse.cleannytimesapp.data.utils
+package com.inhouse.cleannytimesapp.data.util
 
 import com.inhouse.cleannytimesapp.data.model.ArticleEntity
 import com.inhouse.cleannytimesapp.data.model.MediaEntity

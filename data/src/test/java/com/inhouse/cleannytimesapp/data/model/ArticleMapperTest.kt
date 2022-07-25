@@ -1,6 +1,6 @@
 package com.inhouse.cleannytimesapp.data.model
 
-import com.inhouse.cleannytimesapp.data.utils.FakeArticlesData
+import com.inhouse.cleannytimesapp.data.util.FakeArticlesData
 import org.amshove.kluent.shouldBeEqualTo
 import org.junit.Before
 import org.junit.Test

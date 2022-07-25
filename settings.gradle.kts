@@ -85,13 +85,15 @@ dependencyResolutionManagement {
             bundle("kotlin", listOf("kotlin-reflect", "coroutines"))
 
 
-            alias("kotlinstdlib").to("org.jetbrains.kotlin",  "kotlin-stdlib-jdk8").versionRef("kotlin-version")
+            alias("kotlinstdlib").to("org.jetbrains.kotlin", "kotlin-stdlib-jdk8")
+                .versionRef("kotlin-version")
 
             version("retrofit", "2.+")
             alias("retrofit-core").to("com.squareup.retrofit2", "retrofit").versionRef("retrofit")
             alias("converter-moshi").to("com.squareup.retrofit2", "converter-moshi")
                 .versionRef("retrofit")
-            alias("converter-gson").to("com.squareup.retrofit2", "converter-gson").versionRef("retrofit")
+            alias("converter-gson").to("com.squareup.retrofit2", "converter-gson")
+                .versionRef("retrofit")
 
             version("gson-version", "2.+")
             alias("gson").to("com.google.code.gson", "gson").versionRef("gson-version")
@@ -208,15 +210,17 @@ dependencyResolutionManagement {
             alias("mockk").to("io.mockk:mockk:1.+")
             alias("arch").to("androidx.arch.core:core-testing:2.+")
 
-            version("mockwebserver","4.+")
-            alias("mockwebserver").to("com.squareup.okhttp3", "mockwebserver").versionRef("mockwebserver")
+            version("mockwebserver", "4.+")
+            alias("mockwebserver").to("com.squareup.okhttp3", "mockwebserver")
+                .versionRef("mockwebserver")
 
             version("junit", "5.+")
             alias("junit-jupiter-api").to("org.junit.jupiter", "junit-jupiter-api")
                 .versionRef("junit")
 
             version("roboelectric", "4.+")
-            alias("robolectric").to("org.robolectric", "robolectric").versionRef("roboelectric"
+            alias("robolectric").to("org.robolectric", "robolectric").versionRef(
+                "roboelectric"
             )
             bundle(
                 "test",
@@ -232,8 +236,23 @@ dependencyResolutionManagement {
                 )
             )
 
+            version("truth", "1.+")
+            alias("truth").to("com.google.truth", "truth").versionRef("truth")
+            version("junit4", "4.+")
+            alias("junit4").to("junit", "junit").versionRef("junit4")
+
+            bundle(
+                "test.non.android", listOf(
+                    "test-coroutines",
+                    "truth",
+                    "mockk",
+                    "junit4",
+                )
+            )
+
             version("hilt-android-testing", "2.38.1")
-            alias("hilt.android.testing").to("com.google.dagger","hilt-android-testing").versionRef("hilt-android-testing")
+            alias("hilt.android.testing").to("com.google.dagger", "hilt-android-testing")
+                .versionRef("hilt-android-testing")
 
             alias("junit-jupiter-engine").to("org.junit.jupiter", "junit-jupiter-engine")
                 .versionRef("junit")
