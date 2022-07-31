@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:background="@color/gray_custom"
         app:onRefreshListener="@{()->articleListViewModel.loadData()}"
-        app:refreshing="@{articleListViewModel.viewStateFlow}">
+        app:refreshing="@{articleListViewModel.stateFlow}">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:visibility="@{articleListViewModel.viewStateFlow}"
+                android:visibility="@{articleListViewModel.stateFlow}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -49,9 +49,9 @@
                 android:id="@+id/tv_no_result"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="@{articleListViewModel.viewStateFlow}"
                 android:text="@string/no_result_found"
                 android:textStyle="bold"
+                android:visibility="@{articleListViewModel.stateFlow}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -61,12 +61,12 @@
                 android:id="@+id/rv_article_list"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:visibility="@{articleListViewModel.viewStateFlow}"
+                android:visibility="@{articleListViewModel.stateFlow}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:refreshDataWithState="@{articleListViewModel.viewStateFlow}" />
+                app:refreshDataWithState="@{articleListViewModel.stateFlow}" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 

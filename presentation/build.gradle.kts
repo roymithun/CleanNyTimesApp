@@ -93,6 +93,8 @@ dependencies {
     implementation(libs.glide)
     kapt(libs.glidecompiler)
 
+    implementation(libs.bundles.mavericks)
+
     // module
     implementation(project(ModuleDependency.DOMAIN)) {
         exclude(group = "com.inhouse.cleannytimesapp", module = "domain")

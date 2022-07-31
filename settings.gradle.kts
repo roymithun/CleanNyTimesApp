@@ -263,11 +263,22 @@ dependencyResolutionManagement {
             alias("navigation.testing").to("androidx.navigation", "navigation-testing")
                 .versionRef("navigation-testing")
 
-            version("androidx.test.ext","1.+")
-            alias("test.ext").to("androidx.test.ext","junit").versionRef("androidx.test.ext")
+            version("androidx.test.ext", "1.+")
+            alias("test.ext").to("androidx.test.ext", "junit").versionRef("androidx.test.ext")
 
             alias("junit-jupiter-engine").to("org.junit.jupiter", "junit-jupiter-engine")
                 .versionRef("junit")
+
+            version("mavericks", "2.7.0")
+            alias("mvrx").to("com.airbnb.android", "mavericks").versionRef("mavericks")
+            alias("mvrx.hilt").to("com.airbnb.android", "mavericks-hilt").versionRef("mavericks")
+            bundle(
+                "mavericks", listOf(
+                    "mvrx",
+                    "mvrx.hilt"
+                )
+            )
+
         }
     }
 }

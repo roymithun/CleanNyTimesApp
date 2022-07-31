@@ -24,6 +24,7 @@ This project takes advantage of best practices, many popular libraries and tools
     * [Dependency Injection](https://developer.android.com/training/dependency-injection) -
       - [Hilt-Dagger](https://dagger.dev/hilt/) - Standard library to incorporate Dagger dependency injection into an Android application.
       - [Hilt-ViewModel](https://developer.android.com/training/dependency-injection/hilt-jetpack) - DI for injecting `ViewModel`.
+    * [Mavericks](https://airbnb.io/mavericks) - Mavericks is an Android MVI framework from airbnb
     * [Glide](https://bumptech.github.io/glide/) - image loading library
     * [Stetho](http://facebook.github.io/stetho/) - application debugging
     * [Timber](https://github.com/JakeWharton/timber) - a logger with a small, extensible API which provides utility on top of Android's normal Log class
@@ -110,6 +111,14 @@ Gradle plugins are defined in [pluginManagement](https://docs.gradle.org/current
 Dynamic versions aren't supported for Gradle plugins, so [locking dependency](https://docs.gradle.org/current/userguide/dependency_locking.html) mechanism can't be used (like for app library dependencies), and thus versions of some libraries & plugins have to be hardcoded in the [gradle.properties](./gradle.properties) file.
 
 There is no easy way to share id between `pluginManagement` block and `buildSrc` folder, so plugin ids (also used within build scripts), have to be duplicated in the [GradlePluginId](./buildSrc/java/GradlePluginId/kt) file.
+
+## Design decisions
+
+Read related articles to have a better understanding of underlying design decisions and various trade-offs.
+
+* [Multiple ways of defining Clean Architecture layers](https://proandroiddev.com/multiple-ways-of-defining-clean-architecture-layers-bbb70afa5d4a)
+* Using Hilt with MVI library [Mavericks Hilt support](https://airbnb.io/mavericks/#/dagger?id=hilt)
+* More coming soon
 
 ## Getting started
 

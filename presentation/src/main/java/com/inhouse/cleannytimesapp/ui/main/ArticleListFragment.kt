@@ -6,9 +6,11 @@ import android.view.*
 import android.view.inputmethod.InputMethodManager
 import android.widget.SearchView
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.airbnb.mvrx.MavericksView
+import com.airbnb.mvrx.fragmentViewModel
+import com.airbnb.mvrx.withState
 import com.inhouse.cleannytimesapp.R
 import com.inhouse.cleannytimesapp.base.extension.textChanges
 import com.inhouse.cleannytimesapp.databinding.FragmentArticleListBinding
@@ -23,10 +25,10 @@ import kotlinx.coroutines.flow.onEach
 
 
 @AndroidEntryPoint
-class ArticleListFragment : Fragment() {
+class ArticleListFragment : Fragment(), MavericksView {
     lateinit var binding: FragmentArticleListBinding
     lateinit var articleListAdapter: ArticleListAdapter
-    private val viewModel: ArticleListViewModel by viewModels()
+    private val viewModel: ArticleListViewModel by fragmentViewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -73,7 +75,10 @@ class ArticleListFragment : Fragment() {
 
         searchView.textChanges().debounce(Constants.DEBOUNCE_TIMEOUT)
             .onEach {
-                viewModel.searchArticles("%$it%")
+                it?.let {
+                    if (it.isNotEmpty())
+                        viewModel.searchArticles("%$it%")
+                }
             }
             .launchIn(viewLifecycleOwner.lifecycleScope)
     }
@@ -87,5 +92,9 @@ class ArticleListFragment : Fragment() {
         val imm: InputMethodManager =
             requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(binding.root.windowToken, 0)
+    }
+
+    override fun invalidate() = withState(viewModel) {
+        // do nothing for now
     }
 }
