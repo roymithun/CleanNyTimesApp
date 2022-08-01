@@ -1,6 +1,7 @@
 package com.inhouse.cleannytimesapp.data.util
 
 import com.inhouse.cleannytimesapp.data.model.ArticleEntity
+import com.inhouse.cleannytimesapp.data.model.ArticleListEntity
 import com.inhouse.cleannytimesapp.data.model.MediaEntity
 import com.inhouse.cleannytimesapp.data.model.MediaMetadataEntity
 import com.inhouse.cleannytimesapp.domain.model.Article
@@ -111,6 +112,11 @@ object FakeArticlesData {
                 )
             )
         )
+    )
+    val articleListEntity = ArticleListEntity(
+        status = "OK",
+        numResults = 3,
+        results = articleEntities
     )
 
     val articles = listOf(
