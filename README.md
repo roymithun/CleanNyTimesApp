@@ -29,6 +29,7 @@ This project takes advantage of best practices, many popular libraries and tools
     * [Stetho](http://facebook.github.io/stetho/) - application debugging
     * [Timber](https://github.com/JakeWharton/timber) - a logger with a small, extensible API which provides utility on top of Android's normal Log class
     * [Gson](https://github.com/google/gson) - library that can be used to convert Java Objects into their JSON representation
+    * [Turbine](https://github.com/cashapp/turbine) - a nifty little testing library for kotlinx.coroutines [Flow](https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/)
 * Modern Architecture
     * Clean Architecture (domain, data and presentation layers)
     * Single activity architecture using [Navigation component](https://developer.android.com/guide/navigation/navigation-getting-started)
@@ -118,6 +119,7 @@ Read related articles to have a better understanding of underlying design decisi
 
 * [Multiple ways of defining Clean Architecture layers](https://proandroiddev.com/multiple-ways-of-defining-clean-architecture-layers-bbb70afa5d4a)
 * Using Hilt with MVI library [Mavericks Hilt support](https://airbnb.io/mavericks/#/dagger?id=hilt)
+* [Unit Testing Kotlin Flow](https://medium.com/google-developer-experts/unit-testing-kotlin-flow-76ea5f4282c5) using Turbine
 * More coming soon
 
 ## Getting started

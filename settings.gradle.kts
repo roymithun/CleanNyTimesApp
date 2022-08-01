@@ -222,6 +222,11 @@ dependencyResolutionManagement {
             alias("robolectric").to("org.robolectric", "robolectric").versionRef(
                 "roboelectric"
             )
+
+            // test flow
+            version("turbine", "0.8.0")
+            alias("turbine").to("app.cash.turbine", "turbine").versionRef("turbine")
+
             bundle(
                 "test",
 
@@ -233,7 +238,8 @@ dependencyResolutionManagement {
                     "mockk",
                     "arch",
                     "junit-jupiter-api",
-                    "robolectric"
+                    "robolectric",
+                    "turbine"
                 )
             )
 
@@ -248,6 +254,7 @@ dependencyResolutionManagement {
                     "truth",
                     "mockk",
                     "junit4",
+                    "turbine"
                 )
             )
 
@@ -272,13 +279,22 @@ dependencyResolutionManagement {
             version("mavericks", "2.7.0")
             alias("mvrx").to("com.airbnb.android", "mavericks").versionRef("mavericks")
             alias("mvrx.hilt").to("com.airbnb.android", "mavericks-hilt").versionRef("mavericks")
+
             bundle(
                 "mavericks", listOf(
                     "mvrx",
-                    "mvrx.hilt"
+                    "mvrx.hilt",
                 )
             )
 
+            alias("mvrx.testing").to("com.airbnb.android", "mavericks-testing").versionRef("mavericks")
+            alias("mvrx.mocking").to("com.airbnb.android", "mavericks-mocking").versionRef("mavericks")
+            bundle(
+                "mavericks.test", listOf(
+                    "mvrx.testing",
+                    "mvrx.mocking"
+                )
+            )
         }
     }
 }

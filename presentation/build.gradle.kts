@@ -107,6 +107,7 @@ dependencies {
     testImplementation(project(ModuleDependency.LIBRARY_TEST_UTILS))
     testImplementation(libs.bundles.test)
     testRuntimeOnly(libs.junit.jupiter.engine)
+    testImplementation(libs.bundles.mavericks.test)
 
     // Instrumented Unit Tests
     androidTestImplementation(libs.arch)

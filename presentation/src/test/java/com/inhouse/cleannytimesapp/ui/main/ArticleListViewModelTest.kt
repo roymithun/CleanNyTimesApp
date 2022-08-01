@@ -1,5 +1,7 @@
 package com.inhouse.cleannytimesapp.ui.main
 
+import app.cash.turbine.test
+import com.airbnb.mvrx.test.MvRxTestRule
 import com.inhouse.cleannytimesapp.domain.Result
 import com.inhouse.cleannytimesapp.domain.usecase.articles.GetMostPopularArticlesUseCase
 import com.inhouse.cleannytimesapp.domain.usecase.articles.SearchArticlesUseCase
@@ -13,6 +15,7 @@ import io.mockk.coVerify
 import io.mockk.every
 import io.mockk.impl.annotations.MockK
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.runBlocking
 import org.amshove.kluent.shouldBeEqualTo
 import org.junit.Before
 import org.junit.Rule
@@ -23,10 +26,13 @@ class ArticleListViewModelTest {
     @get:Rule
     val coroutineTestRule = MainCoroutineRule()
 
-    @MockK
+    @get:Rule
+    val mvRxRule = MvRxTestRule()
+
+    @MockK(relaxed = true)
     lateinit var mockArticlesUseCase: GetMostPopularArticlesUseCase
 
-    @MockK
+    @MockK(relaxed = true)
     lateinit var mockSearchArticlesUseCase: SearchArticlesUseCase
 
     @MockK
@@ -36,18 +42,25 @@ class ArticleListViewModelTest {
     lateinit var mockNavManager: NavManager
 
     @MockK(relaxed = true)
-    lateinit var params: GetMostPopularArticlesUseCase.Params
-
     lateinit var viewModel: ArticleListViewModel
+
+    @MockK
+    lateinit var viewState: ArticleListViewModel.ViewState
 
     @Before
     fun setUp() {
         MockKAnnotations.init(this)
+        viewState = ArticleListViewModel.ViewState(
+            isLoading = true,
+            isError = false,
+            articles = listOf()
+        )
         viewModel = ArticleListViewModel(
             mockArticlesUseCase,
             mockSearchArticlesUseCase,
             mockArticleItemMapper,
-            mockNavManager
+            mockNavManager,
+            viewState
         )
     }
 
@@ -97,11 +110,14 @@ class ArticleListViewModelTest {
         viewModel.loadData()
 
         // then
-        viewModel.viewStateFlow.value shouldBeEqualTo ArticleListViewModel.ViewState(
-            isLoading = false,
-            isError = false,
-            articles = listOf()
-        )
+        runBlocking {
+            viewModel.stateFlow.test {
+                awaitItem().let {
+                    it.isLoading shouldBeEqualTo false
+                    it.articles shouldBeEqualTo emptyList()
+                }
+            }
+        }
     }
 
     @Test
@@ -118,11 +134,15 @@ class ArticleListViewModelTest {
         viewModel.loadData()
 
         // then
-        viewModel.viewStateFlow.value shouldBeEqualTo ArticleListViewModel.ViewState(
-            isLoading = false,
-            isError = false,
-            articles = articleItems
-        )
+        runBlocking {
+            viewModel.stateFlow.test {
+                expectMostRecentItem().let {
+                    it.isLoading shouldBeEqualTo false
+                    it.articles shouldBeEqualTo articleItems
+                }
+                cancelAndConsumeRemainingEvents()
+            }
+        }
     }
 
     @Test
@@ -134,11 +154,15 @@ class ArticleListViewModelTest {
         viewModel.searchArticles(query = "%%")
 
         // then
-        viewModel.viewStateFlow.value shouldBeEqualTo ArticleListViewModel.ViewState(
-            isLoading = false,
-            isError = false,
-            articles = listOf()
-        )
+        runBlocking {
+            viewModel.stateFlow.test {
+                expectMostRecentItem().let {
+                    it.isLoading shouldBeEqualTo false
+                    it.articles shouldBeEqualTo emptyList()
+                }
+                cancelAndConsumeRemainingEvents()
+            }
+        }
     }
 
     @Test
@@ -155,10 +179,14 @@ class ArticleListViewModelTest {
         viewModel.searchArticles(query = "%%")
 
         // then
-        viewModel.viewStateFlow.value shouldBeEqualTo ArticleListViewModel.ViewState(
-            isLoading = false,
-            isError = false,
-            articles = articleItems
-        )
+        runBlocking {
+            viewModel.stateFlow.test {
+                expectMostRecentItem().let {
+                    it.isLoading shouldBeEqualTo false
+                    it.articles shouldBeEqualTo articleItems
+                }
+                cancelAndConsumeRemainingEvents()
+            }
+        }
     }
 }
