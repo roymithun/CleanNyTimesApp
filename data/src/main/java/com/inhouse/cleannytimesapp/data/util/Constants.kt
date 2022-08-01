@@ -1,4 +1,4 @@
-package com.inhouse.cleannytimesapp.data
+package com.inhouse.cleannytimesapp.data.util
 
 object Constants {
     const val DATABASE_NAME = "database_articles"

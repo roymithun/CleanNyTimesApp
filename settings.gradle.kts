@@ -10,7 +10,8 @@ enableFeaturePreview("ONE_LOCKFILE_PER_PROJECT")
 include(
     ":presentation",
     ":domain",
-    ":data"
+    ":data",
+    ":library_test_utils"
 )
 
 // Gradle plugins are added via plugin management, not the classpath
@@ -40,6 +41,9 @@ pluginManagement {
 
         val agpHiltVersion: String by settings
         id("dagger.hilt.android.plugin") version agpHiltVersion
+
+        val ktlintGradleVersion: String by settings
+        id("org.jlleitschuh.gradle.ktlint") version ktlintGradleVersion
     }
 
     resolutionStrategy {
@@ -83,7 +87,6 @@ dependencyResolutionManagement {
                 .versionRef("coroutines")
 
             bundle("kotlin", listOf("kotlin-reflect", "coroutines"))
-
 
             alias("kotlinstdlib").to("org.jetbrains.kotlin", "kotlin-stdlib-jdk8")
                 .versionRef("kotlin-version")
@@ -188,7 +191,6 @@ dependencyResolutionManagement {
             alias("swiperefreshlayout").to("androidx.swiperefreshlayout", "swiperefreshlayout")
                 .versionRef("swiperefreshlayout-version")
 
-
             // Dagger 2 (version works only ** androidx.appcompat » appcompat	1.1.0)
             version("dagger-version", "2.29.1")
             alias("daggerandroid").to("com.google.dagger", "dagger-android")
@@ -249,7 +251,8 @@ dependencyResolutionManagement {
             alias("junit4").to("junit", "junit").versionRef("junit4")
 
             bundle(
-                "test.non.android", listOf(
+                "test.non.android",
+                listOf(
                     "test.coroutines",
                     "truth",
                     "mockk",
@@ -281,7 +284,8 @@ dependencyResolutionManagement {
             alias("mvrx.hilt").to("com.airbnb.android", "mavericks-hilt").versionRef("mavericks")
 
             bundle(
-                "mavericks", listOf(
+                "mavericks",
+                listOf(
                     "mvrx",
                     "mvrx.hilt",
                 )
@@ -290,7 +294,8 @@ dependencyResolutionManagement {
             alias("mvrx.testing").to("com.airbnb.android", "mavericks-testing").versionRef("mavericks")
             alias("mvrx.mocking").to("com.airbnb.android", "mavericks-mocking").versionRef("mavericks")
             bundle(
-                "mavericks.test", listOf(
+                "mavericks.test",
+                listOf(
                     "mvrx.testing",
                     "mvrx.mocking"
                 )
@@ -298,4 +303,3 @@ dependencyResolutionManagement {
         }
     }
 }
-include(":library_test_utils")

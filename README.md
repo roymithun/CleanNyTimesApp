@@ -46,6 +46,8 @@ This project takes advantage of best practices, many popular libraries and tools
 * UI
     * [Material design](https://material.io/design)
     * Reactive UI
+* Static analysis tools
+    * [Ktlint](https://github.com/pinterest/ktlint) - validate code formatting
 * Gradle
     * [Gradle Kotlin DSL](https://docs.gradle.org/current/userguide/kotlin_dsl.html)
     * Plugins ([SafeArgs](https://developer.android.com/guide/navigation/navigation-pass-data#Safe-args),
@@ -141,7 +143,7 @@ There are a few ways to open this project.
 Code coverage of java and kotlin files can measured using Jacoco scripts. Currently, [:presentation](/presentation) and [:data](/data) modules have jacoco gradle configured. To run code coverage, following command can be run on terminal
 
 ```
- ./gradlew fullCoverageReport
+./gradlew fullCoverageReport
 ```
 
 The generated report can be found at
@@ -149,6 +151,19 @@ The generated report can be found at
 ```
 <your system name>/<your project location>/app/build/coverage-report/index.html
 ```
+
+### Code format validation
+
+Use following command on terminal to run ktlint rules
+```
+./gradlew ktlintCheck
+```
+
+## Known issues
+- `ktlint` fails with Wildcard import (cannot be auto-corrected). To disable follow https://stackoverflow.com/a/73199125/2694480
+- JUnit 5 does not support tests with suspended modifier ([Issue 1914](https://github.com/junit-team/junit5/issues/1914))
+- Gradle dependencies can't be easily shared between app libraries and Gradle plugins https://github.com/gradle/gradle/issues/16077
+
 ## How to consume NyTimes API?
 Most Popular API from [nytimes developer](https://developer.nytimes.com/apis) have been used.
 

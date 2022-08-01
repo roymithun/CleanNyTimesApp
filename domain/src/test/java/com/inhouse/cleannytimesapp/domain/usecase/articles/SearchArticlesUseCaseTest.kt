@@ -14,7 +14,6 @@ import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import org.junit.Before
 import org.junit.Test
 
-
 @OptIn(ExperimentalCoroutinesApi::class)
 class SearchArticlesUseCaseTest {
     private lateinit var searchArticlesUseCase: SearchArticlesUseCase

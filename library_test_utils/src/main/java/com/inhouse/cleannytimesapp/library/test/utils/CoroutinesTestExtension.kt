@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalCoroutinesApi::class)
+
 package com.inhouse.cleannytimesapp.library.test.utils
 
 import kotlinx.coroutines.CoroutineScope
@@ -18,7 +20,6 @@ import org.junit.runner.Description
 * A JUnit Test Extension that swaps the coroutine dispatcher one which executes each task synchronously.
 * You can use this rule for your host side tests that use Kotlin Coroutines.
 */
-@ExperimentalCoroutinesApi
 class MainCoroutineRule(
     val testDispatcher: TestDispatcher = UnconfinedTestDispatcher()
 ) : TestWatcher() {

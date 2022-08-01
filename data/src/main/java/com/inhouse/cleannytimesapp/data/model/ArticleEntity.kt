@@ -24,9 +24,11 @@ data class ArticleEntity(
     val title: String,
     @SerializedName("abstract") val abstractContent: String,
     @TypeConverters(RoomTypeConverters::class)
-    @SerializedName("des_facet") val desFacetList: List<String>,
+    @SerializedName("des_facet")
+    val desFacetList: List<String>,
     @TypeConverters(RoomTypeConverters::class)
-    @SerializedName("media") val mediaList: List<MediaEntity>
+    @SerializedName("media")
+    val mediaList: List<MediaEntity>
 ) : ModelEntity()
 
 class ArticleEntityMapper @Inject constructor(

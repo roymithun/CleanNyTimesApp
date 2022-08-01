@@ -40,5 +40,4 @@ inline fun <reified T : Fragment> launchFragmentInHiltContainer(
 
         (fragment as T).action()
     }
-
 }

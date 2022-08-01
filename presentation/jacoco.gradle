@@ -6,7 +6,6 @@ jacoco {
 task fullCoverageReport(type: JacocoReport) {
     dependsOn(
             ":presentation:testDebugUnitTest"
-//            ":presentation:createDebugCoverageReport"
     )
     reports {
         csv.enabled = false

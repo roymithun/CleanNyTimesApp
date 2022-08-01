@@ -29,7 +29,6 @@ class ArticleListAdapter(private val clickListener: OnClickListener) :
 
         override fun areContentsTheSame(oldItem: ArticleItem, newItem: ArticleItem): Boolean =
             oldItem.id == newItem.id
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArticleViewHolder {

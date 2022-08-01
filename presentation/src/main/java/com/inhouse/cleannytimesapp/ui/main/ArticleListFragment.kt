@@ -23,7 +23,6 @@ import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
-
 @AndroidEntryPoint
 class ArticleListFragment : Fragment(), MavericksView {
     lateinit var binding: FragmentArticleListBinding
@@ -76,8 +75,9 @@ class ArticleListFragment : Fragment(), MavericksView {
         searchView.textChanges().debounce(Constants.DEBOUNCE_TIMEOUT)
             .onEach {
                 it?.let {
-                    if (it.isNotEmpty())
+                    if (it.isNotEmpty()) {
                         viewModel.searchArticles("%$it%")
+                    }
                 }
             }
             .launchIn(viewLifecycleOwner.lifecycleScope)
