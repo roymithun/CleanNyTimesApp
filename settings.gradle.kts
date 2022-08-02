@@ -44,6 +44,9 @@ pluginManagement {
 
         val ktlintGradleVersion: String by settings
         id("org.jlleitschuh.gradle.ktlint") version ktlintGradleVersion
+
+        val detektVersion: String by settings
+        id("io.gitlab.arturbosch.detekt") version detektVersion
     }
 
     resolutionStrategy {

@@ -15,6 +15,7 @@ import com.inhouse.cleannytimesapp.domain.usecase.articles.SearchArticlesUseCase
 import com.inhouse.cleannytimesapp.model.ArticleItem
 import com.inhouse.cleannytimesapp.model.ArticleItemMapper
 import com.inhouse.cleannytimesapp.navigation.NavManager
+import com.inhouse.cleannytimesapp.util.Constants.PERIOD
 import dagger.Binds
 import dagger.Module
 import dagger.assisted.Assisted
@@ -105,7 +106,7 @@ class ArticleListViewModel @AssistedInject constructor(
         viewModelScope.launch {
             mostPopularArticlesUseCase.invoke(
                 GetMostPopularArticlesUseCase.Params(
-                    7,
+                    PERIOD,
                     BuildConfig.API_KEY
                 )
             ).let { processArticleListResult(it) }

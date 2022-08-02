@@ -11,19 +11,15 @@ import timber.log.Timber
 
 @BindingAdapter("mediaList", "placeholder")
 fun ImageView.loadThumbnailFromMediaList(mediaList: List<MediaItem>, placeholder: Drawable) {
-    try {
-        val url: String =
-            if (mediaList.isEmpty()) "invalid" else mediaList.firstOrNull()?.mediaMetadataList?.firstOrNull()?.url
-                ?: "empty list"
-        Glide.with(context)
-            .load(url)
-            .error(R.drawable.ic_broken_image)
-            .placeholder(placeholder)
-            .transform(CircleCrop())
-            .into(this)
-    } catch (e: Exception) {
-        Timber.e("exception== ${e.localizedMessage}")
-    }
+    val url: String =
+        if (mediaList.isEmpty()) "invalid" else mediaList.firstOrNull()?.mediaMetadataList?.firstOrNull()?.url
+            ?: "empty list"
+    Glide.with(context)
+        .load(url)
+        .error(R.drawable.ic_broken_image)
+        .placeholder(placeholder)
+        .transform(CircleCrop())
+        .into(this)
 }
 
 @BindingAdapter("articlePhoto", "placeholder")

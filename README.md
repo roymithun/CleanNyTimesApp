@@ -48,6 +48,7 @@ This project takes advantage of best practices, many popular libraries and tools
     * Reactive UI
 * Static analysis tools
     * [Ktlint](https://github.com/pinterest/ktlint) - validate code formatting
+    * [Detekt](https://detekt.dev/docs/gettingstarted/gradlegs) - Code smell analysis with complexity reports based on lines of code, cyclomatic complexity and number of code smells
 * Gradle
     * [Gradle Kotlin DSL](https://docs.gradle.org/current/userguide/kotlin_dsl.html)
     * Plugins ([SafeArgs](https://developer.android.com/guide/navigation/navigation-pass-data#Safe-args),

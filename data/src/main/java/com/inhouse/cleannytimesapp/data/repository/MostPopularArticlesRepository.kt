@@ -15,6 +15,7 @@ class MostPopularArticlesRepository @Inject constructor(
     private val articleEntityMapper: ArticleEntityMapper,
     private val articleDao: ArticleDao
 ) : ArticlesRepository {
+    @Suppress("detekt.SwallowedException")
     override suspend fun getArticles(period: Int, apiKey: String): List<Article> {
         return try {
             val articleEntityList: List<ArticleEntity> = articleListApi.getArticleList(
@@ -30,9 +31,6 @@ class MostPopularArticlesRepository @Inject constructor(
             }
         } catch (e: UnknownHostException) {
             articleDao.getAllArticles().map { articleEntityMapper.mapToDomain(it) }
-        } catch (e: Exception) {
-            Timber.e("exception: ${e.message}")
-            emptyList()
         }
     }
 

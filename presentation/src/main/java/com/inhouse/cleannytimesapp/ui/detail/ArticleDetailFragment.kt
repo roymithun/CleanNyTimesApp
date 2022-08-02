@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.inhouse.cleannytimesapp.databinding.FragmentArticleDetailBinding
+import com.inhouse.cleannytimesapp.util.Constants.MEDIA_META_DATA_SIZE
 
 class ArticleDetailFragment : Fragment() {
     private lateinit var binding: FragmentArticleDetailBinding
@@ -23,17 +24,16 @@ class ArticleDetailFragment : Fragment() {
         val selectedArticle =
             ArticleDetailFragmentArgs.fromBundle(requireArguments()).selectedArticle
 
-        selectedArticle.let {
-            binding.article = it
-            it.mediaList.firstOrNull()?.let { media ->
-                binding.media = media
-                media.mediaMetadataList.let { listMediaMetaData ->
-                    if (listMediaMetaData.size >= 3) {
-                        binding.articlePhoto = listMediaMetaData[2].url
-                    }
+        binding.article = selectedArticle
+
+        selectedArticle.mediaList.firstOrNull()?.let { media ->
+            binding.media = media
+            media.mediaMetadataList.let { listMediaMetaData ->
+                if (listMediaMetaData.size >= MEDIA_META_DATA_SIZE) {
+                    binding.articlePhoto = listMediaMetaData[2].url
                 }
             }
-            binding.executePendingBindings()
         }
+        binding.executePendingBindings()
     }
 }
