@@ -7,7 +7,6 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.inhouse.cleannytimesapp.R
 import com.inhouse.cleannytimesapp.model.MediaItem
-import timber.log.Timber
 
 @BindingAdapter("mediaList", "placeholder")
 fun ImageView.loadThumbnailFromMediaList(mediaList: List<MediaItem>, placeholder: Drawable) {

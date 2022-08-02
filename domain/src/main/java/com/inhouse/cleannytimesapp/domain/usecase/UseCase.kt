@@ -37,4 +37,4 @@ abstract class UseCase<in P, out R>(private val coroutineDispatcher: CoroutineDi
     protected abstract suspend fun execute(parameters: P): R
 }
 
-class ExecutionException(msg: String): Exception(msg)
+class ExecutionException(msg: String) : Exception(msg)

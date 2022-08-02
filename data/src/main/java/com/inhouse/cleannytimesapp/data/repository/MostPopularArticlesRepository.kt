@@ -6,7 +6,6 @@ import com.inhouse.cleannytimesapp.data.model.ArticleEntityMapper
 import com.inhouse.cleannytimesapp.data.remote.api.ArticleListApi
 import com.inhouse.cleannytimesapp.domain.model.Article
 import com.inhouse.cleannytimesapp.domain.repository.ArticlesRepository
-import timber.log.Timber
 import java.net.UnknownHostException
 import javax.inject.Inject
 

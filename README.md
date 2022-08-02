@@ -153,11 +153,22 @@ The generated report can be found at
 <your system name>/<your project location>/app/build/coverage-report/index.html
 ```
 
-### Code format validation
+### Code format validation with KtLint
 
-Use following command on terminal to run ktlint rules
+Use following command on terminal to run [ktlint rules](https://ktlint.github.io/#getting-started) report of which can be found at `build/reports/ktlint`
 ```
 ./gradlew ktlintCheck
+```
+
+### Static code analysis with Detekt
+
+Use following command to generate config file to be found at `$rootDir/config/detekt/detekt.yml`
+```
+./gradlew detektGenerateConfig
+```
+Use following command to run code analysis report of which can be found at `build/reports/detekt`
+```
+./gradlew detekt
 ```
 
 ## Known issues
