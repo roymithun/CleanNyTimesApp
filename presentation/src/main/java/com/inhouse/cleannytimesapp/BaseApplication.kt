@@ -1,6 +1,7 @@
 package com.inhouse.cleannytimesapp
 
 import android.app.Application
+import com.airbnb.mvrx.Mavericks
 import com.facebook.stetho.Stetho
 import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
@@ -11,6 +12,7 @@ class BaseApplication : Application() {
         super.onCreate()
         initTimber()
         initStetho()
+        Mavericks.initialize(this)
     }
 
     private fun initTimber() {
@@ -24,5 +26,4 @@ class BaseApplication : Application() {
             Stetho.initializeWithDefaults(this)
         }
     }
-
 }

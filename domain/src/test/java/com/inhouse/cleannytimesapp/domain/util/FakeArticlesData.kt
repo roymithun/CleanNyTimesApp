@@ -73,7 +73,8 @@ object FakeArticlesData {
                     )
                 )
             )
-        ), Article(
+        ),
+        Article(
             id = 100000007846960,
             source = "New York Times",
             url = "https://www.nytimes.com/2021/07/04/sports/basketball/espn-rachel-nichols-maria-taylor.html",

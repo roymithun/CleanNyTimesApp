@@ -1,7 +1,7 @@
 package com.inhouse.cleannytimesapp.data.di
 
-import com.inhouse.cleannytimesapp.data.HttpClient
 import com.inhouse.cleannytimesapp.data.remote.api.ArticleListApi
+import com.inhouse.cleannytimesapp.data.util.HttpClient
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

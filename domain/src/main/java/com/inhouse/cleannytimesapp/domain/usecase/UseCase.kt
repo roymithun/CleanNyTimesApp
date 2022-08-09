@@ -25,7 +25,7 @@ abstract class UseCase<in P, out R>(private val coroutineDispatcher: CoroutineDi
                     Result.Success(it)
                 }
             }
-        } catch (e: Exception) {
+        } catch (e: ExecutionException) {
             Result.Error(e)
         }
     }
@@ -33,6 +33,8 @@ abstract class UseCase<in P, out R>(private val coroutineDispatcher: CoroutineDi
     /**
      * Override this to set the code to be executed.
      */
-    @Throws(RuntimeException::class)
+    @Throws(ExecutionException::class)
     protected abstract suspend fun execute(parameters: P): R
 }
+
+class ExecutionException(msg: String) : Exception(msg)

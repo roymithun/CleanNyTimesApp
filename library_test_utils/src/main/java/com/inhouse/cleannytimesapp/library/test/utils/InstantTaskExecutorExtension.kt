@@ -1,4 +1,4 @@
-package com.tista.library.testutil
+package com.inhouse.cleannytimesapp.library.test.utils
 
 import android.annotation.SuppressLint
 import androidx.arch.core.executor.ArchTaskExecutor

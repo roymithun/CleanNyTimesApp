@@ -1,10 +1,13 @@
 package com.inhouse.cleannytimesapp.ui.main
 
-import androidx.lifecycle.viewModelScope
+import com.airbnb.mvrx.MavericksState
+import com.airbnb.mvrx.MavericksViewModel
+import com.airbnb.mvrx.MavericksViewModelFactory
+import com.airbnb.mvrx.hilt.AssistedViewModelFactory
+import com.airbnb.mvrx.hilt.MavericksViewModelComponent
+import com.airbnb.mvrx.hilt.ViewModelKey
+import com.airbnb.mvrx.hilt.hiltMavericksViewModelFactory
 import com.inhouse.cleannytimesapp.BuildConfig
-import com.inhouse.cleannytimesapp.base.viewmodel.BaseAction
-import com.inhouse.cleannytimesapp.base.viewmodel.BaseViewModel
-import com.inhouse.cleannytimesapp.base.viewmodel.BaseViewState
 import com.inhouse.cleannytimesapp.domain.Result
 import com.inhouse.cleannytimesapp.domain.model.Article
 import com.inhouse.cleannytimesapp.domain.usecase.articles.GetMostPopularArticlesUseCase
@@ -12,32 +15,61 @@ import com.inhouse.cleannytimesapp.domain.usecase.articles.SearchArticlesUseCase
 import com.inhouse.cleannytimesapp.model.ArticleItem
 import com.inhouse.cleannytimesapp.model.ArticleItemMapper
 import com.inhouse.cleannytimesapp.navigation.NavManager
-import dagger.hilt.android.lifecycle.HiltViewModel
+import com.inhouse.cleannytimesapp.util.Constants.PERIOD
+import dagger.Binds
+import dagger.Module
+import dagger.assisted.Assisted
+import dagger.assisted.AssistedFactory
+import dagger.assisted.AssistedInject
+import dagger.hilt.InstallIn
+import dagger.multibindings.IntoMap
 import kotlinx.coroutines.launch
 import timber.log.Timber
-import javax.inject.Inject
 
-@HiltViewModel
-class ArticleListViewModel @Inject constructor(
+@Module
+@InstallIn(MavericksViewModelComponent::class)
+interface ExampleViewModelModule {
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(ArticleListViewModel::class)
+    fun articleListViewModelFactory(factory: ArticleListViewModel.Factory): AssistedViewModelFactory<*, *>
+}
+
+class ArticleListViewModel @AssistedInject constructor(
     private val mostPopularArticlesUseCase: GetMostPopularArticlesUseCase,
     private val searchArticlesUseCase: SearchArticlesUseCase,
     private val articleItemMapper: ArticleItemMapper,
-    private val navManager: NavManager
-) :
-    BaseViewModel<ArticleListViewModel.ViewState, ArticleListViewModel.Action>(ViewState()) {
+    private val navManager: NavManager,
+    @Assisted initialState: ViewState
+) : MavericksViewModel<ArticleListViewModel.ViewState>(initialState) {
+
+    @AssistedFactory
+    interface Factory : AssistedViewModelFactory<ArticleListViewModel, ViewState> {
+        override fun create(state: ViewState): ArticleListViewModel
+    }
+
+    companion object :
+        MavericksViewModelFactory<ArticleListViewModel, ViewState> by hiltMavericksViewModelFactory()
 
     var lastQueryText: String? = null
 
     init {
+        loadData()
+    }
+
+    fun loadData() {
         onLoadData()
     }
 
-    override fun onLoadData() {
-        // reset state
-        sendAction(Action.ArticleListLoadingIdle)
+    /*override fun onLoadData() {*/
+    private fun onLoadData() {
+        onReduceState(Action.ArticleListLoadingIdle)
         lastQueryText?.let {
             searchArticles(lastQueryText)
-        } ?: run { getArticleList() }
+        } ?: run {
+            getArticleList()
+        }
     }
 
     fun searchArticles(query: String?) {
@@ -66,14 +98,15 @@ class ArticleListViewModel @Inject constructor(
                 Action.ArticleListLoadingFailure
             }
         }
-        sendAction(action)
+        onReduceState(action)
+//        sendAction(action)
     }
 
     private fun getArticleList() {
         viewModelScope.launch {
             mostPopularArticlesUseCase.invoke(
                 GetMostPopularArticlesUseCase.Params(
-                    7,
+                    PERIOD,
                     BuildConfig.API_KEY
                 )
             ).let { processArticleListResult(it) }
@@ -89,35 +122,37 @@ class ArticleListViewModel @Inject constructor(
         val isLoading: Boolean = true,
         val isError: Boolean = false,
         val articles: List<ArticleItem> = listOf()
-    ) : BaseViewState
+    ) : MavericksState
 
-    sealed interface Action : BaseAction {
+    sealed interface Action {
         class ArticleListLoadingSuccess(val articles: List<ArticleItem>) : Action
         object ArticleListEmptyResult : Action
         object ArticleListLoadingFailure : Action
         object ArticleListLoadingIdle : Action
     }
 
-    override fun onReduceState(viewAction: Action) = when (viewAction) {
-        is Action.ArticleListLoadingSuccess -> state.copy(
-            isLoading = false,
-            isError = false,
-            articles = viewAction.articles
-        )
-        is Action.ArticleListLoadingFailure -> state.copy(
-            isLoading = false,
-            isError = true,
-            articles = listOf()
-        )
-        is Action.ArticleListEmptyResult -> state.copy(
-            isLoading = false,
-            isError = false,
-            articles = listOf()
-        )
-        else -> state.copy(
-            isLoading = true,
-            isError = false,
-            articles = listOf()
-        )
+    private fun onReduceState(viewAction: Action) = setState {
+        when (viewAction) {
+            is Action.ArticleListLoadingSuccess -> copy(
+                isLoading = false,
+                isError = false,
+                articles = viewAction.articles
+            )
+            is Action.ArticleListLoadingFailure -> copy(
+                isLoading = false,
+                isError = true,
+                articles = listOf()
+            )
+            is Action.ArticleListEmptyResult -> copy(
+                isLoading = false,
+                isError = false,
+                articles = listOf()
+            )
+            else -> copy(
+                isLoading = true,
+                isError = false,
+                articles = listOf()
+            )
+        }
     }
 }

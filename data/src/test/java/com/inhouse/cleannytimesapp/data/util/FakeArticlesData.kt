@@ -1,6 +1,7 @@
 package com.inhouse.cleannytimesapp.data.util
 
 import com.inhouse.cleannytimesapp.data.model.ArticleEntity
+import com.inhouse.cleannytimesapp.data.model.ArticleListEntity
 import com.inhouse.cleannytimesapp.data.model.MediaEntity
 import com.inhouse.cleannytimesapp.data.model.MediaMetadataEntity
 import com.inhouse.cleannytimesapp.domain.model.Article
@@ -76,7 +77,8 @@ object FakeArticlesData {
                     )
                 )
             )
-        ), ArticleEntity(
+        ),
+        ArticleEntity(
             id = 100000007846960,
             source = "New York Times",
             url = "https://www.nytimes.com/2021/07/04/sports/basketball/espn-rachel-nichols-maria-taylor.html",
@@ -111,6 +113,11 @@ object FakeArticlesData {
                 )
             )
         )
+    )
+    val articleListEntity = ArticleListEntity(
+        status = "OK",
+        numResults = 3,
+        results = articleEntities
     )
 
     val articles = listOf(
@@ -181,7 +188,8 @@ object FakeArticlesData {
                     )
                 )
             )
-        ), Article(
+        ),
+        Article(
             id = 100000007846960,
             source = "New York Times",
             url = "https://www.nytimes.com/2021/07/04/sports/basketball/espn-rachel-nichols-maria-taylor.html",

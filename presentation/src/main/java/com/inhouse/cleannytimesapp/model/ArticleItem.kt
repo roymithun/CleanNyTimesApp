@@ -23,7 +23,6 @@ data class ArticleItem(
     val mediaList: List<MediaItem>
 ) : ModelItem(), Parcelable
 
-
 class ArticleItemMapper @Inject constructor(
     private val mediaItemMapper: MediaItemMapper
 ) : ItemMapper<Article, ArticleItem> {

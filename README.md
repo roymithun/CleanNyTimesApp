@@ -24,10 +24,12 @@ This project takes advantage of best practices, many popular libraries and tools
     * [Dependency Injection](https://developer.android.com/training/dependency-injection) -
       - [Hilt-Dagger](https://dagger.dev/hilt/) - Standard library to incorporate Dagger dependency injection into an Android application.
       - [Hilt-ViewModel](https://developer.android.com/training/dependency-injection/hilt-jetpack) - DI for injecting `ViewModel`.
+    * [Mavericks](https://airbnb.io/mavericks) - Mavericks is an Android MVI framework from airbnb
     * [Glide](https://bumptech.github.io/glide/) - image loading library
     * [Stetho](http://facebook.github.io/stetho/) - application debugging
     * [Timber](https://github.com/JakeWharton/timber) - a logger with a small, extensible API which provides utility on top of Android's normal Log class
     * [Gson](https://github.com/google/gson) - library that can be used to convert Java Objects into their JSON representation
+    * [Turbine](https://github.com/cashapp/turbine) - a nifty little testing library for kotlinx.coroutines [Flow](https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/)
 * Modern Architecture
     * Clean Architecture (domain, data and presentation layers)
     * Single activity architecture using [Navigation component](https://developer.android.com/guide/navigation/navigation-getting-started)
@@ -44,6 +46,9 @@ This project takes advantage of best practices, many popular libraries and tools
 * UI
     * [Material design](https://material.io/design)
     * Reactive UI
+* Static analysis tools
+    * [Ktlint](https://github.com/pinterest/ktlint) - validate code formatting
+    * [Detekt](https://detekt.dev/docs/gettingstarted/gradlegs) - Code smell analysis with complexity reports based on lines of code, cyclomatic complexity and number of code smells
 * Gradle
     * [Gradle Kotlin DSL](https://docs.gradle.org/current/userguide/kotlin_dsl.html)
     * Plugins ([SafeArgs](https://developer.android.com/guide/navigation/navigation-pass-data#Safe-args),
@@ -111,6 +116,15 @@ Dynamic versions aren't supported for Gradle plugins, so [locking dependency](ht
 
 There is no easy way to share id between `pluginManagement` block and `buildSrc` folder, so plugin ids (also used within build scripts), have to be duplicated in the [GradlePluginId](./buildSrc/java/GradlePluginId/kt) file.
 
+## Design decisions
+
+Read related articles to have a better understanding of underlying design decisions and various trade-offs.
+
+* [Multiple ways of defining Clean Architecture layers](https://proandroiddev.com/multiple-ways-of-defining-clean-architecture-layers-bbb70afa5d4a)
+* Using Hilt with MVI library [Mavericks Hilt support](https://airbnb.io/mavericks/#/dagger?id=hilt)
+* [Unit Testing Kotlin Flow](https://medium.com/google-developer-experts/unit-testing-kotlin-flow-76ea5f4282c5) using Turbine
+* More coming soon
+
 ## Getting started
 
 There are a few ways to open this project.
@@ -130,7 +144,7 @@ There are a few ways to open this project.
 Code coverage of java and kotlin files can measured using Jacoco scripts. Currently, [:presentation](/presentation) and [:data](/data) modules have jacoco gradle configured. To run code coverage, following command can be run on terminal
 
 ```
- ./gradlew fullCoverageReport
+./gradlew fullCoverageReport
 ```
 
 The generated report can be found at
@@ -138,6 +152,30 @@ The generated report can be found at
 ```
 <your system name>/<your project location>/app/build/coverage-report/index.html
 ```
+
+### Code format validation with KtLint
+
+Use following command on terminal to run [ktlint rules](https://ktlint.github.io/#getting-started) report of which can be found at `build/reports/ktlint`
+```
+./gradlew ktlintCheck
+```
+
+### Static code analysis with Detekt
+
+Use following command to generate config file to be found at `$rootDir/config/detekt/detekt.yml`
+```
+./gradlew detektGenerateConfig
+```
+Use following command to run code analysis report of which can be found at `build/reports/detekt`
+```
+./gradlew detekt
+```
+
+## Known issues
+- `ktlint` fails with Wildcard import (cannot be auto-corrected). To disable follow https://stackoverflow.com/a/73199125/2694480
+- JUnit 5 does not support tests with suspended modifier ([Issue 1914](https://github.com/junit-team/junit5/issues/1914))
+- Gradle dependencies can't be easily shared between app libraries and Gradle plugins https://github.com/gradle/gradle/issues/16077
+
 ## How to consume NyTimes API?
 Most Popular API from [nytimes developer](https://developer.nytimes.com/apis) have been used.
 

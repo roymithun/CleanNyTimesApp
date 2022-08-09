@@ -6,7 +6,6 @@ import com.inhouse.cleannytimesapp.data.model.ArticleEntityMapper
 import com.inhouse.cleannytimesapp.data.remote.api.ArticleListApi
 import com.inhouse.cleannytimesapp.domain.model.Article
 import com.inhouse.cleannytimesapp.domain.repository.ArticlesRepository
-import timber.log.Timber
 import java.net.UnknownHostException
 import javax.inject.Inject
 
@@ -15,6 +14,7 @@ class MostPopularArticlesRepository @Inject constructor(
     private val articleEntityMapper: ArticleEntityMapper,
     private val articleDao: ArticleDao
 ) : ArticlesRepository {
+    @Suppress("detekt.SwallowedException")
     override suspend fun getArticles(period: Int, apiKey: String): List<Article> {
         return try {
             val articleEntityList: List<ArticleEntity> = articleListApi.getArticleList(
@@ -30,9 +30,6 @@ class MostPopularArticlesRepository @Inject constructor(
             }
         } catch (e: UnknownHostException) {
             articleDao.getAllArticles().map { articleEntityMapper.mapToDomain(it) }
-        } catch (e: Exception) {
-            Timber.e("exception: ${e.message}")
-            emptyList()
         }
     }
 

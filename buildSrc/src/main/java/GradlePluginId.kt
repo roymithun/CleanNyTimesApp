@@ -10,4 +10,6 @@ object GradlePluginId {
     const val ANDROID_JUNIT_5 = "de.mannodermaus.android-junit5"
     const val HILT_ANDROID = "dagger.hilt.android.plugin"
     const val JAVA_LIBRARY = "java-library"
+    const val KTLINT_GRADLE = "org.jlleitschuh.gradle.ktlint"
+    const val DETEKT = "io.gitlab.arturbosch.detekt"
 }

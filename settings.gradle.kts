@@ -10,7 +10,8 @@ enableFeaturePreview("ONE_LOCKFILE_PER_PROJECT")
 include(
     ":presentation",
     ":domain",
-    ":data"
+    ":data",
+    ":library_test_utils"
 )
 
 // Gradle plugins are added via plugin management, not the classpath
@@ -40,6 +41,12 @@ pluginManagement {
 
         val agpHiltVersion: String by settings
         id("dagger.hilt.android.plugin") version agpHiltVersion
+
+        val ktlintGradleVersion: String by settings
+        id("org.jlleitschuh.gradle.ktlint") version ktlintGradleVersion
+
+        val detektVersion: String by settings
+        id("io.gitlab.arturbosch.detekt") version detektVersion
     }
 
     resolutionStrategy {
@@ -83,7 +90,6 @@ dependencyResolutionManagement {
                 .versionRef("coroutines")
 
             bundle("kotlin", listOf("kotlin-reflect", "coroutines"))
-
 
             alias("kotlinstdlib").to("org.jetbrains.kotlin", "kotlin-stdlib-jdk8")
                 .versionRef("kotlin-version")
@@ -188,7 +194,6 @@ dependencyResolutionManagement {
             alias("swiperefreshlayout").to("androidx.swiperefreshlayout", "swiperefreshlayout")
                 .versionRef("swiperefreshlayout-version")
 
-
             // Dagger 2 (version works only ** androidx.appcompat » appcompat	1.1.0)
             version("dagger-version", "2.29.1")
             alias("daggerandroid").to("com.google.dagger", "dagger-android")
@@ -222,6 +227,11 @@ dependencyResolutionManagement {
             alias("robolectric").to("org.robolectric", "robolectric").versionRef(
                 "roboelectric"
             )
+
+            // test flow
+            version("turbine", "0.8.0")
+            alias("turbine").to("app.cash.turbine", "turbine").versionRef("turbine")
+
             bundle(
                 "test",
 
@@ -233,7 +243,8 @@ dependencyResolutionManagement {
                     "mockk",
                     "arch",
                     "junit-jupiter-api",
-                    "robolectric"
+                    "robolectric",
+                    "turbine"
                 )
             )
 
@@ -243,11 +254,13 @@ dependencyResolutionManagement {
             alias("junit4").to("junit", "junit").versionRef("junit4")
 
             bundle(
-                "test.non.android", listOf(
+                "test.non.android",
+                listOf(
                     "test.coroutines",
                     "truth",
                     "mockk",
                     "junit4",
+                    "turbine"
                 )
             )
 
@@ -263,12 +276,33 @@ dependencyResolutionManagement {
             alias("navigation.testing").to("androidx.navigation", "navigation-testing")
                 .versionRef("navigation-testing")
 
-            version("androidx.test.ext","1.+")
-            alias("test.ext").to("androidx.test.ext","junit").versionRef("androidx.test.ext")
+            version("androidx.test.ext", "1.+")
+            alias("test.ext").to("androidx.test.ext", "junit").versionRef("androidx.test.ext")
 
             alias("junit-jupiter-engine").to("org.junit.jupiter", "junit-jupiter-engine")
                 .versionRef("junit")
+
+            version("mavericks", "2.7.0")
+            alias("mvrx").to("com.airbnb.android", "mavericks").versionRef("mavericks")
+            alias("mvrx.hilt").to("com.airbnb.android", "mavericks-hilt").versionRef("mavericks")
+
+            bundle(
+                "mavericks",
+                listOf(
+                    "mvrx",
+                    "mvrx.hilt",
+                )
+            )
+
+            alias("mvrx.testing").to("com.airbnb.android", "mavericks-testing").versionRef("mavericks")
+            alias("mvrx.mocking").to("com.airbnb.android", "mavericks-mocking").versionRef("mavericks")
+            bundle(
+                "mavericks.test",
+                listOf(
+                    "mvrx.testing",
+                    "mvrx.mocking"
+                )
+            )
         }
     }
 }
-include(":library_test_utils")
